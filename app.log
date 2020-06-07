@@ -1,498 +1,772 @@
-root - WARNING - encoding with 'idna' codec failed (UnicodeError: label empty or too long)
-root - WARNING - encoding with 'idna' codec failed (UnicodeError: label empty or too long)
-root - WARNING - HTTPSConnectionPool(host='2006.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='crack.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='download.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='images.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='2019.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='warez.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='2018.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='index.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='serial.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='news.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='2020.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='2016.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='2017.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='12.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='spacer.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='full.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='logo.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='11.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='about.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='contact.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='privacy.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='10.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='2005.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='default.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='products.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='archives.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='sitemap.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='1.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='links.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='09.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='08.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='01.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='2.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='login.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='07.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='articles.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='05.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='04.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='article.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='help.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='services.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='21.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='5.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='13.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='category.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='page.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='features.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='6.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='4.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='content.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='14.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='15.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='main.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='media.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='resources.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='press.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='templates.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='18.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='2004.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='16.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='info.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='20.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='22.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='9.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='misc.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='19.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='24.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='i.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='2007.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='23.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='legal.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='banners.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='30.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='xml.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='tools.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='0.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='user.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='forums.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='img.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='business.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='feed.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='8.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='video.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='graphics.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='linux.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='profile.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='email.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='books.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='banner.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='06.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='keygen.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='reviews.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='view.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='games.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='research.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='copyright.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='feedback.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='icons.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='17.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='partners.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='top.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='jobs.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='28.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='projects.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='terms.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='27.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='print.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='people.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='pdf.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='ads.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='themes.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='modules.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='company.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='2003.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='pub.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='comments.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='common.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='story.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='site.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='blank.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='calendar.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='aboutus.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='product.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='sports.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='buttons.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='logos.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='english.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='uploads.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='image.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='31.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='atom.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='gallery.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='newsletter.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='careers.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='publications.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='pages.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='technology.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='stories.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='music.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='stats.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='community.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='data.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='history.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='s.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='images.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='library.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='wiki.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='header.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='internet.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='disclaimer.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='b.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='in.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='store.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='a.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='spam.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='default.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='users.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='mail.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='education.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='topics.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='members.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='nav.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-urllib3.connection - WARNING - Certificate did not match expected hostname: blogs.truora.com. Certificate: {'subject': ((('commonName', 'ssl803016.cloudflaressl.com'),),), 'issuer': ((('countryName', 'GB'),), (('stateOrProvinceName', 'Greater Manchester'),), (('localityName', 'Salford'),), (('organizationName', 'COMODO CA Limited'),), (('commonName', 'COMODO ECC Domain Validation Secure Server CA 2'),)), 'version': 3, 'serialNumber': '5DC3EB1C58A7D0597A44A1D534C8235B', 'notBefore': 'May 20 00:00:00 2020 GMT', 'notAfter': 'Nov 26 23:59:59 2020 GMT', 'subjectAltName': (('DNS', 'ssl803016.cloudflaressl.com'), ('DNS', '*.hscoscdn10.net'), ('DNS', 'hscoscdn10.net')), 'OCSP': ('http://ocsp.comodoca4.com',), 'caIssuers': ('http://crt.comodoca4.com/COMODOECCDomainValidationSecureServerCA2.crt',), 'crlDistributionPoints': ('http://crl.comodoca4.com/COMODOECCDomainValidationSecureServerCA2.crl',)}
-root - WARNING - HTTPSConnectionPool(host='blogs.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError("hostname 'blogs.truora.com' doesn't match either of 'ssl803016.cloudflaressl.com', '*.hscoscdn10.net', 'hscoscdn10.net'")))
-root - WARNING - HTTPSConnectionPool(host='clear.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='news.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='feeds.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='c.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='2002.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='awards.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='pics.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='general.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='dir.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='solutions.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='signup.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='map.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='public.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='de.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='weblog.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='overview.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='shop.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='photos.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='contacts.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='doc.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='fr.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='button.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='travel.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='pixel.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='subscribe.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='tips.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='advertise.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='index2.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='list.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='homepage.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='documents.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='go.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='web.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='submit.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='contact_us.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='viewtopic.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='arrow.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='adclick.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='wp-content.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='movies.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='p.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='us.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='catalog.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='staff.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='hardware.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='wireless.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='online.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='screenshots.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='apps.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='global.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='directory.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='mobile.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='other.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='version.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='tech.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='2001.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='welcome.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='training.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='releases.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='policy.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='space.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='faqs.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='link.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='advertising.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='t.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='admin.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='static.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='join.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='member.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='ewbutton_guestbook.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='reports.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='weather.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='health.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='scripts.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='browse.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='firefox_reco.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='showallsites.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='programs.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='windows.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='menu.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='ewbutton_community.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='2000.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='entertainment.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='europemirror.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='newsletters.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='categories.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='pr.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='detail.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='assets.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='36.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_4.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_5.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='32.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='registration.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_8.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_2.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_10.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_3.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_6.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_17.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_9.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_13.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_12.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_11.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_14.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_20.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_19.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_1.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_18.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_7.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_15.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_21.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='strona_16.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='kontakt.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='glossary.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='40.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='mailman.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='cnt.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='tutorials.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='showthread.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='33.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='order.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='listinfo.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='whitepapers.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='35.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='r.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='audio.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='footer.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='network.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='privacy_policy.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='politics.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='d.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='eng.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='it.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='37.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='php.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='chat.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='text.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='post.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='podcasts.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='science.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='34.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='nl.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='39.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='account.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='intro.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='adview.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='dot.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='sponsors.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='privacypolicy.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='comment.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='42.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='41.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='x.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='uk.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='node.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='viewforum.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='upload.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='affiliates.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='service.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='special.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='faculty.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='flash.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='forms.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='48.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='google.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='donate.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='design.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='folder.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='50.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='book.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='servlet.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='issues.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='world.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='38.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='guide.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='java.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='memberlist.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='pubs.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='m.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='bullet.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='testimonials.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='art.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='show.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='e.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='about_us.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='f.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='section.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='es.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='microsoft.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='portal.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='corporate.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='buy.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='report.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='47.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='43.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='photo.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='lg.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='partner.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='international.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='demo.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='trans.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='45.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='tv.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='gfx.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='cs.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='cart.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='board.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='flags.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='cgi.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='podcast.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='51.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='images01.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='perl.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='documentation.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='current.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='posts.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='pix.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='tn.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='shopping.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='49.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='lists.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='start.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='multimedia.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='55.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='title.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='site_map.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='promo.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='add.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='59.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='headers.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='redirect.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='opinion.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='management.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='enterprise.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='icon.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='60.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='all.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='authors.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='tag.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='53.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='54.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='code.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='h.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='pl.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='57.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='63.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='52.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='whatsnew.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='details.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='g.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='46.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='consumer.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='search.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='password.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='affiliate.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='pictures.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='61.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='56.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='new.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='faq.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='faq.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='more.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='sp.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='home.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='policies.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='home.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='wp-login.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='click.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='free.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='tests.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='poll.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='personal.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='03.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='skins.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='storage.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='albums.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='downloads.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='forum.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='archive.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='printer.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='64.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='security.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='html.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='58.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='96.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='webapp.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='advisories.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='group.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='guides.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='l.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='forumdisplay.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='97.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-urllib3.connection - WARNING - Certificate did not match expected hostname: blog.truora.com. Certificate: {'subject': ((('commonName', 'ssl803016.cloudflaressl.com'),),), 'issuer': ((('countryName', 'GB'),), (('stateOrProvinceName', 'Greater Manchester'),), (('localityName', 'Salford'),), (('organizationName', 'COMODO CA Limited'),), (('commonName', 'COMODO ECC Domain Validation Secure Server CA 2'),)), 'version': 3, 'serialNumber': '5DC3EB1C58A7D0597A44A1D534C8235B', 'notBefore': 'May 20 00:00:00 2020 GMT', 'notAfter': 'Nov 26 23:59:59 2020 GMT', 'subjectAltName': (('DNS', 'ssl803016.cloudflaressl.com'), ('DNS', '*.hscoscdn10.net'), ('DNS', 'hscoscdn10.net')), 'OCSP': ('http://ocsp.comodoca4.com',), 'caIssuers': ('http://crt.comodoca4.com/COMODOECCDomainValidationSecureServerCA2.crt',), 'crlDistributionPoints': ('http://crl.comodoca4.com/COMODOECCDomainValidationSecureServerCA2.crl',)}
-root - WARNING - HTTPSConnectionPool(host='blog.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError("hostname 'blog.truora.com' doesn't match either of 'ssl803016.cloudflaressl.com', '*.hscoscdn10.net', 'hscoscdn10.net'")))
-root - WARNING - HTTPSConnectionPool(host='shared.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='02.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='en.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='bin.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='maps.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='3.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='26.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='events.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='29.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='7.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='25.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='software.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='results.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='mp3.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='cgi-bin.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='rss.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='register.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='mac.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='contactus.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='smilies.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='author.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='back.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='1999.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='papers.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='employment.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='local.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='44.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='videos.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='topic.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='apple.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='counter.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='howto.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='radio.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='conferences.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='products.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='display.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
-root - WARNING - HTTPSConnectionPool(host='66.truora.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1108)')))
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5043' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5044' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5046' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5045' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5048' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5042' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5004' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5005' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5008' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5009' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5002' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5057' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5056' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5034' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5052' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5049' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5054' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5053' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5050' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5051' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5063' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5065' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5211' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 815, in _resolve_host
+    await event.wait()
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/locks.py", line 37, in wait
+    raise self._exc
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5066' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5068' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5069' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-5, 'No address associated with hostname')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -5] No address associated with hostname
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5067' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5072' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5070' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5071' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5074' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5073' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5077' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5075' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5055' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5058' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5060' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5084' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5062' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5061' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5166' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 815, in _resolve_host
+    await event.wait()
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/locks.py", line 37, in wait
+    raise self._exc
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5083' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5076' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5303' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 815, in _resolve_host
+    await event.wait()
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/locks.py", line 37, in wait
+    raise self._exc
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5082' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5081' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5079' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5078' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5080' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5096' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5094' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5085' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5251' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-2, 'Name or service not known')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 815, in _resolve_host
+    await event.wait()
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/locks.py", line 37, in wait
+    raise self._exc
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-5064' coro=<TCPConnector._resolve_host() done, defined at /home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py:774> exception=gaierror(-3, 'Temporary failure in name resolution')>
+Traceback (most recent call last):
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/connector.py", line 829, in _resolve_host
+    addrs = await \
+  File "/home/diego-moraes/.local/lib/python3.8/site-packages/aiohttp/resolver.py", line 29, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 825, in getaddrinfo
+    return await self.run_in_executor(
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution

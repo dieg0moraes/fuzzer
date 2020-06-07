@@ -20,7 +20,6 @@ class Fuzzer:
         for word in f:
             words.append(word.strip())
 
-
         print('Number of words in documents', len(words))
         return words
 
@@ -46,12 +45,9 @@ class Fuzzer:
 
         return urls
 
-    async def fuzz(self, sub, words, workers):
-        urls = self.get_urls(sub)
+    async def fuzz(self, urls, words, workers):
         data = await self.get_results(urls, words, workers)
         return data
-
-
 
     async def get_results(self, urls, words, workers):
         client = Client()

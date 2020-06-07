@@ -1,12 +1,17 @@
 import sys
-import requests
+
 import asyncio
 import threading
 import argparse
+
 from logic.fuzzer import Fuzzer
 
 from concurrent.futures import ThreadPoolExecutor
 from timeit import default_timer
+
+
+import asyncio
+from aiohttp import ClientSession
 
 def main():
     parser = argparse.ArgumentParser(description='Add querystring parameters')
@@ -20,11 +25,13 @@ def main():
     args = parser.parse_args()
 
     fuzzer = Fuzzer(args.url, args.dir)
-
-    loop = asyncio.get_event_loop()
     sub =  True if args.s is not None else False
-    future = asyncio.ensure_future(fuzzer.fuzz(sub, args.word, args.workers))
+    urls = fuzzer.get_urls(sub)
+    loop = asyncio.get_event_loop()
+
+    future = asyncio.ensure_future(fuzzer.fuzz(urls, args.word, args.workers))
     loop.run_until_complete(future)
 
+    #rs = (grequests.get(u) for u in urlsmap = grequests.map(rs)
 
 main()
