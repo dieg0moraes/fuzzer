@@ -21,7 +21,7 @@ class Client:
 
     async def fetch(self, session, base_url):
         try:
-            async with session.get(base_url, timeout=3, proxy='http://127.0.0.1:8081') as response:
+            async with session.get(base_url, timeout=3) as response:
                 REQUESTS = REQUESTS + 1
                 print(REQUESTS)
                 if response.status == 200:
@@ -29,14 +29,12 @@ class Client:
                     elapsed = default_timer() - START_TIME
                     time_completed_at = "{:5.2f}s".format(elapsed)
                     print("{0:<30} {1:>20}".format(base_url, time_completed_at))
-                #delay = response.headers.get("DELAY")
-                #date = response.headers.get("DATE")
-                #print("{}:{} with delay {}".format(date, response.url, delay))
+                delay = response.headers.get("DELAY")
+                date = response.headers.get("DATE")
+                print("{}:{} with delay {}".format(date, response.url, delay))
                 return await response.text()
-        except aiohttp.ClientProxyConnectionError:
-            print('conn')
         except UnicodeError:
-            print('unicode')
+            print('unicode error')
         except:
             pass
 
@@ -47,11 +45,6 @@ class Client:
     async def get_data(self, urls, words, workers):
         tasks = []
         sem = asyncio.Semaphore(workers)
-        #conn = ProxyConnector(remote_resolve=False)
-        connector = ChainProxyConnector.from_urls([
-            'http://127.0.0.1:8081',
-            'socks5://localhost:9050',
-        ])
         async with ClientSession() as session:
             for base_url in urls[:words]:
                 task = asyncio.ensure_future(self.bound_fetch(sem, session, base_url))
