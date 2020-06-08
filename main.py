@@ -1,12 +1,10 @@
 import sys
 
 import asyncio
-import threading
 import argparse
 
 from logic.fuzzer import Fuzzer
 
-from concurrent.futures import ThreadPoolExecutor
 from timeit import default_timer
 
 
