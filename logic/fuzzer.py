@@ -32,11 +32,11 @@ class Fuzzer:
         print('Number of words in documents', len(words))
         return words
 
-    def get_urls(self):
+    def get_urls(self, start, end):
         urls = []
         words = self.get_wordlist()
 
-        for word in words[:15]:
+        for word in words[start:end]:
             url = self.build_url(word)
             urls.append(url)
 
@@ -53,12 +53,11 @@ class Fuzzer:
 
 
 
-    async def fuzz(self, urls, words, workers):
-        print(words)
-        data = await self.get_results(urls, words, workers)
+    async def fuzz(self, urls, workers):
+        data = await self.get_results(urls, workers)
         return data
 
-    async def get_results(self, urls, words, workers):
+    async def get_results(self, urls, workers):
         client = Client()
-        data = await client.get_data(urls, words, workers)
+        data = await client.get_data(urls, workers)
         return data

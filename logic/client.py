@@ -38,11 +38,11 @@ class Client:
         async with sem:
             await self.fetch(session, url)
 
-    async def get_data(self, urls, words, workers):
+    async def get_data(self, urls, workers):
         tasks = []
         sem = asyncio.Semaphore(workers)
         async with ClientSession() as session:
-            for base_url in urls[:words]:
+            for base_url in urls:
                 task = asyncio.ensure_future(self.bound_fetch(sem, session, base_url))
                 tasks.append(task)
 
