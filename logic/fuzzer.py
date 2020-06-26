@@ -1,16 +1,25 @@
 import argparse
 import asyncio
 from .client import Client
-
+from utils import query_yes_no
 
 class Fuzzer:
 
 
     def __init__(self, url, directory):
-        if not url.endswith('/'):
-            self.url = url + '/'
+        insert_word = url.find('*')
+        inject = False
+        if insert_word != -1:
+            inject = query_yes_no('* Custom injection found - or continue ')
+            if not inject:
+                index = url.find('*')
+                self.url = url[:index] + url[index+1 :]
+            else:
+                self.url = url
         else:
             self.url = url
+
+
 
         self.directory = directory
 
@@ -23,29 +32,29 @@ class Fuzzer:
         print('Number of words in documents', len(words))
         return words
 
-    def get_urls(self, sub):
+    def get_urls(self):
         urls = []
         words = self.get_wordlist()
-        if not sub:
-            for word in words:
-                urls.append(self.url + word)
 
-        else:
-            for word in words:
-                if self.url.startswith('http://www.'):
-                    url = self.url.replace('http://www.', 'http://' + word + '.')
-                elif self.url.startswith('https://www.'):
-                    url = self.url.replace('https://www.', 'https://' + word + '.')
-                elif self.url.startswith('http://'):
-                    url = self.url.replace('http://','http://' + word + '.')
-                elif self.url.startswith('https://'):
-                    url = self.url.replace('https://', 'https://' + word + '.')
-
-                urls.append(url)
+        for word in words[:15]:
+            url = self.build_url(word)
+            urls.append(url)
 
         return urls
 
+    def build_url(self, word):
+        index = self.url.find('*')
+        if index != -1:
+            url = self.url[:index] + word + self.url[index+1:]
+        else:
+            url = self.url + word
+        print(url)
+        return url
+
+
+
     async def fuzz(self, urls, words, workers):
+        print(words)
         data = await self.get_results(urls, words, workers)
         return data
 

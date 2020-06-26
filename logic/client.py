@@ -28,9 +28,6 @@ class Client:
                     elapsed = default_timer() - START_TIME
                     time_completed_at = "{:5.2f}s".format(elapsed)
                     print("{0:<30} {1:>20}".format(base_url, time_completed_at))
-                #delay = response.headers.get("DELAY")
-                #date = response.headers.get("DATE")
-                #print("{}:{} with delay {}".format(date, response.url, delay))
                 return await response.text()
         except UnicodeError:
             print('unicode error')
