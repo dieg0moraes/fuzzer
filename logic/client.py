@@ -10,12 +10,14 @@ from aiohttp import ClientSession
 
 from aiohttp_socks import ProxyType, ProxyConnector, ChainProxyConnector
 
+from colorama import init, Fore
 
 
 logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
 START_TIME = default_timer()
 REQUESTS = 0
+init(autoreset=True)
 
 class Client:
 
@@ -24,10 +26,13 @@ class Client:
             async with session.get(base_url, timeout=3) as response:
 
                 if response.status == 200:
-                    print("SUCCESS::{0}".format(base_url))
+                    print(Fore.LIGHTGREEN_EX + "SUCCESS::", end="")
+                    # print("SUCCESS::{0}".format(base_url))
                     elapsed = default_timer() - START_TIME
                     time_completed_at = "{:5.2f}s".format(elapsed)
                     print("{0:<30} {1:>20}".format(base_url, time_completed_at))
+                else:
+                    print(Fore.RED + "FAIL::{0}".format(base_url))
                 return await response.text()
         except UnicodeError:
             print('unicode error')
