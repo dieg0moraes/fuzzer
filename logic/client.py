@@ -32,12 +32,12 @@ class Client:
                     time_completed_at = "{:5.2f}s".format(elapsed)
                     print("{0:<30} {1:>20}".format(base_url, time_completed_at))
                 else:
-                    print(Fore.RED + "FAIL::{0}".format(base_url))
+                    print(Fore.RED + "FAIL({0})::{1}".format(response.status, base_url))
                 return await response.text()
         except UnicodeError:
             print('unicode error')
         except Exception as e:
-            pass
+            print(Fore.LIGHTYELLOW_EX + "EXCEPTION({0})::{1}".format(e, Fore.RESET + base_url))
 
     async def bound_fetch(self, sem, session, url):
         async with sem:
