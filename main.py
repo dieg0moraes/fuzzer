@@ -20,7 +20,7 @@ def main():
     # parser.add_argument('-w', '--word', type=int, help='Numbers of words')
     parser.add_argument('-t', '--workers', type=int, help='Numbers of workers', default=50)
     parser.add_argument('-s', '--start', type=int, help='Start in n dictionary', default=0)
-    parser.add_argument('-e', '--end', type=int, help='End in n dictionary', default=100)
+    parser.add_argument('-e', '--end', type=int, help='End in n dictionary', default=1000000)
     parser.add_argument('-i', '--interval', type=int, help='Task interval', required=True)
     # group = parser.add_mutually_exclusive_group(required=True)
 
@@ -44,8 +44,8 @@ def main():
     vuelta = 0
     while True:
         vuelta += 1
-        print("@-------------{0}/{1}-------------@".format(vuelta, vueltas))
-        future = asyncio.ensure_future(fuzzer.fuzz(urls[start:end+1], args.workers))
+        print(f'@-------------{vuelta}/{vueltas}-------------@')
+        future = asyncio.ensure_future(fuzzer.fuzz(urls[start : end+1], args.workers))
         loop.run_until_complete(future)
 
         if end == hard_end:
@@ -63,5 +63,4 @@ def main():
     print("END.")
 
     # rs = (grequests.get(u) for u in urlsmap = grequests.map(rs)
-
 main()

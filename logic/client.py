@@ -32,7 +32,8 @@ class Client:
                     time_completed_at = "{:5.2f}s".format(elapsed)
                     print("{0:<30} {1:>20}".format(base_url, time_completed_at))
                 else:
-                    print(Fore.RED + "FAIL({0})::{1}".format(response.status, base_url))
+                    pass
+                    #print(Fore.RED + "FAIL({0})::{1}".format(response.status, base_url))
                 return await response.text()
         except UnicodeError:
             print('unicode error')

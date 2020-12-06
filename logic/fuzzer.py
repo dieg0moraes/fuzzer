@@ -36,19 +36,18 @@ class Fuzzer:
         urls = []
         words = self.get_wordlist()
 
-        for num, word in enumerate(words[start:end]):
-            url = self.build_url(word, num)
+        for word in words[start:end]:
+            url = self.build_url(word)
             urls.append(url)
 
         return urls
 
-    def build_url(self, word, num):
+    def build_url(self, word):
         index = self.url.find('*')
         if index != -1:
             url = self.url[:index] + word + self.url[index+1:]
         else:
             url = self.url + word
-        print("{0} - {1}".format(num + 1, url))
         return url
 
 
