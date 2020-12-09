@@ -9,7 +9,8 @@ from aiohttp import ClientSession
 
 
 START_TIME = default_timer()
-REQUESTS = 0
+global stats
+stats = [0, 0, 0]
 
 
 class Client:
@@ -19,15 +20,17 @@ class Client:
 
     async def fetch(self, session, base_url):
         try:
-            async with session.get(base_url, timeout=10) as response:
+            async with session.get(base_url, timeout=3) as response:
 
                 if response.status == 200:
                     elapsed = default_timer() - START_TIME
                     time_completed_at = f"{elapsed:5.2f}s"
                     log_message = f"{base_url:<30} {time_completed_at:>20}"
                     self.log.lsuccess(log_message)
+                    stats[0] += 1
                 else:
                     self.log.lstatus(str(response.status), base_url)
+                    stats[1] += 1
 
                 return await response.text()
 
@@ -35,10 +38,10 @@ class Client:
             self.log.ldebug('Unicode error')
         except Exception as exc:
             # TODO: Agarrar específicas de conexión.
-            # BUG: Las de asyncio quedan vacías (exc = "").
-            self.log.lexc(exc, False, base_url)
+            self.log.lexc(type(exc), 0, base_url)
+            stats[2] += 1
         # except Exception as error:
-        #     self.log.exc(error, True)
+        #     self.log.exc(type(exc), 1)
 
     async def bound_fetch(self, sem, session, url):
         async with sem:

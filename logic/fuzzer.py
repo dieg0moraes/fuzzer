@@ -25,14 +25,13 @@ class Fuzzer:
 
         self.directory = directory
 
-    def get_wordlist(self):
+    def get_wordlist(self):  # TODO: Menos memoria solo guardando hasta end.
         """Get words from dictionary."""
         dictionary = open(self.directory, 'r')
         words = []
         for word in dictionary:
             words.append(word.strip())
         dictionary.close()
-        self.log.linfo(f'Number of words to test: {len(words)}')
         return words
 
     def get_urls(self, start, end):
@@ -43,7 +42,7 @@ class Fuzzer:
         for word in words[start:end]:
             url = self.build_url(word)
             urls.append(url)
-
+        self.log.linfo(f'Number of urls to test: {len(urls)}')
         return urls
 
     def build_url(self, word):

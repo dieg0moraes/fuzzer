@@ -3,9 +3,11 @@ LICENCIA
 """
 import asyncio
 import argparse
+import datetime
 from math import ceil
 from logic.log import LogWrapper
 from logic.fuzzer import Fuzzer
+from logic.client import stats
 
 
 def main():
@@ -28,6 +30,7 @@ def main():
     log_options.add_argument('--debug', help='Show debug messages', action='store_true')
     log_options.add_argument('--logall', help='Log everything', action='store_true')
     log_options.add_argument('--logfile', help='Log Output to app.log', action='store_true')
+    log_options.add_argument('--nocolors', help='Disable colored logs', action='store_false')
 
     args = parser.parse_args()
 
@@ -36,9 +39,9 @@ def main():
 
     # Log Setup #
     if args.logall:
-        log_config = [args.logfile, "ALL"]
+        log_config = [args.logfile, args.nocolors, "ALL"]
     else:
-        log_config = [args.logfile, args.noinfo, args.rstatus, args.exceptions, args.debug]
+        log_config = [args.logfile, args.nocolors, args.noinfo, args.rstatus, args.exceptions, args.debug]
     main_logger = LogWrapper("main_log", log_config)
 
     # Setup #
@@ -57,10 +60,10 @@ def main():
     vuelta = 0
 
     # Start #
-    main_logger.linfo("Starting")
+    main_logger.linfo(f"Starting - {datetime.datetime.now()}")
     while True:
         vuelta += 1
-        main_logger.linfo(f'@-------------{vuelta}/{vueltas}-------------@')
+        main_logger.linfo(f"@-------------{vuelta}/{vueltas}-------------@")
         future = asyncio.ensure_future(fuzzer.fuzz(urls[start:end+1], args.workers))
         loop.run_until_complete(future)
 
@@ -76,7 +79,10 @@ def main():
         if start > end:
             start = end
 
-    main_logger.linfo("END.")
+    main_logger.linfo(f"Total found: {stats[0]}")
+    main_logger.linfo(f"Total fails: {stats[1]}")
+    main_logger.linfo(f"Total exceptions: {stats[2]}")
+    main_logger.linfo("***********END***********")
     # rs = (grequests.get(u) for u in urlsmap = grequests.map(rs)
 
 
