@@ -1,5 +1,5 @@
 """
-LICENCIA
+Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 import asyncio
 import argparse
@@ -7,7 +7,8 @@ import datetime
 from math import ceil
 from logic.log import LogWrapper
 from logic.fuzzer import Fuzzer
-from logic.client import stats
+from logic.stats import Stats
+from logic.settings import END_DEFAULT
 
 
 def main():
@@ -20,11 +21,14 @@ def main():
 
     required.add_argument('-u', '--url', help='Base url', required=True)
     required.add_argument('-d', '--dir', help='dictionary wordlist path', required=True)
-    performance.add_argument('-t', '--workers', type=int, help='Numbers of workers', default=50)
+
+    performance.add_argument('-w', '--workers', type=int, help='Numbers of workers', default=50)
     performance.add_argument('-s', '--start', type=int, help='Start in n dictionary', default=0)
-    performance.add_argument('-e', '--end', type=int, help='End in n dictionary', default=1000000)  # TODO: Issue #1.
-    performance.add_argument('-i', '--interval', type=int, help='Task interval', required=True)
-    log_options.add_argument('--exceptions', help='Show exception messages', action='store_true')
+    performance.add_argument('-e', '--end', type=int, help='End in n dictionary', default=END_DEFAULT)
+    performance.add_argument('-i', '--interval', type=int, help='Execution interval', required=True)
+    performance.add_argument('-t', '--timeout', type=float, help='Timeout for each request (Default=3)', default=3)
+
+    log_options.add_argument('--exceptions', help='Show exception and error messages', action='store_true')
     log_options.add_argument('--rstatus', help='Show response http status code messages', action='store_true')
     log_options.add_argument('--noinfo', help='Do not show info messages', action='store_false')
     log_options.add_argument('--debug', help='Show debug messages', action='store_true')
@@ -34,29 +38,55 @@ def main():
 
     args = parser.parse_args()
 
+    if args.end == END_DEFAULT:
+        with open(args.dir, 'r') as dictionary:
+            total_lines = 0
+            for line in dictionary:
+                total_lines += 1
+            args.end = total_lines
+
+    # Check arguments #
     if args.interval > args.end - args.start:
         parser.error("--interval must not be grater than the difference bethween --start and --end")
+    if args.timeout <= 0:
+        parser.error("--timeout must be grater than 0")
 
     # Log Setup #
     if args.logall:
-        log_config = [args.logfile, args.nocolors, "ALL"]
+        log_config = {
+            "info": True,
+            "status": True,
+            "exceptions": True,
+            "debug": True
+        }
     else:
-        log_config = [args.logfile, args.nocolors, args.noinfo, args.rstatus, args.exceptions, args.debug]
+        log_config = {
+            "info": args.noinfo,
+            "status": args.rstatus,
+            "exceptions": args.exceptions,
+            "debug": args.debug,
+        }
+    log_config["file"] = args.logfile
+    log_config["colors"] = args.nocolors
+
     main_logger = LogWrapper("main_log", log_config)
 
     # Setup #
-    fuzzer = Fuzzer(args.url, args.dir, main_logger)
+    stats = Stats()
+
+    fuzzer = Fuzzer(args.url, args.dir, main_logger, stats, args.timeout)
 
     interval = args.interval
-    start = args.start
-    end = start + interval
-    hard_end = args.end
+    start = 0
+    end = interval
     stop = False
 
-    urls = fuzzer.get_urls(start, hard_end)
+    urls = fuzzer.get_urls(args.start, args.end)
     loop = asyncio.get_event_loop()
 
-    vueltas = int(ceil((hard_end - start) / interval))
+    hard_end = len(urls) - 1
+
+    vueltas = int(ceil((args.end - args.start) / interval))
     vuelta = 0
 
     # Start #
@@ -79,9 +109,9 @@ def main():
         if start > end:
             start = end
 
-    main_logger.linfo(f"Total found: {stats[0]}")
-    main_logger.linfo(f"Total fails: {stats[1]}")
-    main_logger.linfo(f"Total exceptions: {stats[2]}")
+    main_logger.linfo(f"Total found: {stats.success}")
+    main_logger.linfo(f"Total fails: {stats.fail}")
+    main_logger.linfo(f"Total exceptions: {stats.exception}")
     main_logger.linfo("***********END***********")
     # rs = (grequests.get(u) for u in urlsmap = grequests.map(rs)
 

@@ -1,12 +1,12 @@
 """
-INSERTE LICENCIA
+Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 import logging
 from colorama import Fore, Back
+from .settings import SUCCESS_LEVEL_NUM, EXCEPTION_CODE, ERROR_CODE, CRITICAL_CODE
 
 
 # New logging level (SUCCESS) #
-SUCCESS_LEVEL_NUM = 15
 logging.addLevelName(SUCCESS_LEVEL_NUM, "SUCCESS")
 
 def success_def(self, message, *args, **kws):
@@ -23,13 +23,10 @@ class LogWrapper:
 
     def __init__(self, name, config):
 
-        if config[2] == "ALL":
-            self.info = self.rstatus = self.exc = self.debug = True
-        else:
-            self.info = config[2]
-            self.rstatus = config[3]
-            self.exc = config[4]
-            self.debug = config[5]
+        self.info = config["info"]
+        self.rstatus = config["status"]
+        self.exc = config["exceptions"]
+        self.debug = config["debug"]
 
         # Get new logger.
         self.logger = logging.getLogger(name)
@@ -38,14 +35,14 @@ class LogWrapper:
         formatter = logging.Formatter('[%(levelname)s] %(message)s')
 
         # File Handler.
-        if config[0]:
+        if config["file"]:
             self.fh = logging.FileHandler('app.log')
             self.fh.setLevel(logging.DEBUG)
             self.fh.setFormatter(formatter)
             self.logger.addHandler(self.fh)
 
         # Console Handler.
-        if config[1]:
+        if config["colors"]:
             formatter = CustomFormatter()
 
         self.ch = logging.StreamHandler()
@@ -62,7 +59,7 @@ class LogWrapper:
     def ldebug(self, debug_text):
         """Log debug messages"""
         if self.debug:
-            self.logger.debug('DEBUG::%s', debug_text)
+            self.logger.debug(debug_text)
 
 
     def linfo(self, info_text):
@@ -71,14 +68,14 @@ class LogWrapper:
             self.logger.info(info_text)
 
 
-    def lexc(self, exception, is_error, url=""):
+    def lexc(self, exception, code_num, url=""):
         """Log exceptions."""
         if self.exc:
-            if is_error == 0:
+            if code_num == EXCEPTION_CODE:
                 self.logger.warning('EXCEPTION(%s)::%s', exception, url)
-            elif is_error == 1:
+            elif code_num == ERROR_CODE:
                 self.logger.error(exception)
-            elif is_error == 2:
+            elif code_num == CRITICAL_CODE:
                 self.logger.critical(exception)
 
 
@@ -114,4 +111,3 @@ class CustomFormatter(logging.Formatter):
         log_fmt = self.FORMATS.get(record.levelno)
         formatter = logging.Formatter(log_fmt)
         return formatter.format(record)
-
