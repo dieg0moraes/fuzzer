@@ -142,3 +142,4 @@ cython_debug/
 
 # Other
 shortDictionary.txt
+.DS_Store

@@ -1,13 +1,48 @@
-# fuzzer
+# Fuzzer
 
-pip install -r requirements.txt
+MIT License.
 
--u -> url like http://example.com (REQUIRED)
+### Set up
 
--w -> number of words to inspect (REQUIRED)
+- cd to Fuzzer directory.
 
--t number of workers (50 default)
+- python3 -m pip install -r requirements.txt
 
--s a -> look for subdomains (if not the script will look for .com/{word})
+### Usage
 
--d -> path to dictionary (REQUIRED)
+```
+Usage: python3 main.py [args]
+
+Arguments
+
+(*) = Required
+
+-h (--help)           Show help message and exit.
+
+Basic arguments:
+
+-u (--url) -> Url like http://www.example.com/ (*)
+You may add an asterisk to inject the word in a specific place, like http://*.example.com/
+By default it is http://www.example.com/*
+Notice you should add the "/" at the end, or it will be http://www.example.com*
+
+-d (--dir)            Path to dictionary wordlist. (*)
+
+Performance options:
+
+-w (--workers)        Number of workers (50 by default).
+-s (--start)          Index of word to start in the dictionary (defaults to 0, the first word of the dictionary).
+-e (--end)            Index of the last word of the dictionary to test (defaults to the last word of the dictionary).
+-i (--interval)       Number of intervals to execute all the requests (*)
+-t (--timeout)        Timeout for each request (Defaults to 3)
+
+Log options:
+
+--exceptions          Show exception and error messages
+--rstatus             Show response http status code messages (200 status code is always logged)
+--noinfo              Do not show info messages
+--debug               Show debug messages
+--logall              Log everything
+--logfile             Log Output to app.log
+--nocolors            Disable colored logs
+```
