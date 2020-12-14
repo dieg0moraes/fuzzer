@@ -8,6 +8,7 @@ from math import ceil
 from logic.log import LogWrapper
 from logic.fuzzer import Fuzzer
 from logic.stats import Stats
+from logic.builder import UrlBuilder
 from logic.settings import END_DEFAULT
 
 
@@ -46,6 +47,8 @@ def main():
             args.end = total_lines
 
     # Check arguments #
+    if args.start >= args.end:
+        parser.error("--end must be grater than --start")
     if args.interval > args.end - args.start:
         parser.error("--interval must not be grater than the difference bethween --start and --end")
     if args.timeout <= 0:
@@ -73,28 +76,28 @@ def main():
 
     # Setup #
     stats = Stats()
-
-    fuzzer = Fuzzer(args.url, args.dir, main_logger, stats, args.timeout)
+    urls = UrlBuilder(args.url, args.dir, args.start, args.end, main_logger)
+    fuzzer = Fuzzer(urls, args.workers, main_logger, stats, args.timeout)
 
     interval = args.interval
     start = 0
     end = interval
     stop = False
 
-    urls = fuzzer.get_urls(args.start, args.end)
+    # urls = fuzzer.get_urls(args.start, args.end)
     loop = asyncio.get_event_loop()
 
-    hard_end = len(urls) - 1
+    hard_end = len(urls.urls) - 1
 
     vueltas = int(ceil((args.end - args.start) / interval))
     vuelta = 0
 
     # Start #
-    main_logger.linfo(f"Starting - {datetime.datetime.now()}")
+    main_logger.linfo(f"Starting at {datetime.datetime.now()}")
     while True:
         vuelta += 1
         main_logger.linfo(f"@-------------{vuelta}/{vueltas}-------------@")
-        future = asyncio.ensure_future(fuzzer.fuzz(urls[start:end+1], args.workers))
+        future = asyncio.ensure_future(fuzzer.fuzz(start, end+1))
         loop.run_until_complete(future)
 
         if end == hard_end:
@@ -112,6 +115,7 @@ def main():
     main_logger.linfo(f"Total found: {stats.success}")
     main_logger.linfo(f"Total fails: {stats.fail}")
     main_logger.linfo(f"Total exceptions: {stats.exception}")
+    main_logger.linfo(f"Ending at {datetime.datetime.now()}")
     main_logger.linfo("***********END***********")
     # rs = (grequests.get(u) for u in urlsmap = grequests.map(rs)
 
