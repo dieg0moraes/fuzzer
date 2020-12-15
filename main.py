@@ -76,8 +76,9 @@ def main():
 
     # Setup #
     stats = Stats()
-    urls = UrlBuilder(args.url, args.dir, args.start, args.end, main_logger)
-    fuzzer = Fuzzer(urls, args.workers, main_logger, stats, args.timeout)
+    urls = UrlBuilder(args.url, args.dir, args.start, args.end)
+    main_logger.linfo(f'Number of urls to test: {len(urls.urls)}')
+    fuzzer = Fuzzer(urls.urls, args.workers, main_logger, stats, args.timeout)
 
     interval = args.interval
     start = 0

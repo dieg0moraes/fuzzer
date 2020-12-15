@@ -10,7 +10,7 @@ class Fuzzer:
         self.log = logger
         self.stats = stats
         self.timeout = timeout
-        self.urls = urls.urls
+        self.urls = urls
         self.workers = workers
 
 

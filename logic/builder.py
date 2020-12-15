@@ -6,10 +6,10 @@ from utils import query_yes_no
 
 class UrlBuilder:
     """Url building class"""
-    def __init__(self, target_url, directory, start, end, logger):
+    def __init__(self, target_url, directory, start, end):
         self.target_url = target_url
         self.directory = directory
-        self.log = logger
+        # self.log = logger
         self.start = start
         self.end = end
         self.urls = self.builder()
@@ -55,7 +55,6 @@ class UrlBuilder:
         for word in words:
             url = self.build_url(word)
             urls.append(url)
-        self.log.linfo(f'Number of urls to test: {len(urls)}')
         return urls
 
 
