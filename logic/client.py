@@ -1,49 +1,60 @@
-import sys
-
+"""
+Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
+"""
 import asyncio
-import argparse
-import aiohttp
 from timeit import default_timer
-
-import logging
 from aiohttp import ClientSession
+from .settings import EXCEPTION_CODE, ERROR_CODE
 
-from aiohttp_socks import ProxyType, ProxyConnector, ChainProxyConnector
+# from aiohttp_socks import ProxyType, ProxyConnector, ChainProxyConnector
 
-
-
-logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
 START_TIME = default_timer()
-REQUESTS = 0
+
 
 class Client:
 
-    async def fetch(self, session, base_url):
+    def __init__(self, logger, stats):
+        self.log = logger
+        self.stats = stats
+
+    async def fetch(self, session, base_url, timeout):
         try:
-            async with session.get(base_url, timeout=3) as response:
+            async with session.get(base_url, timeout=timeout) as response:
 
                 if response.status == 200:
-                    print("SUCCESS::{0}".format(base_url))
                     elapsed = default_timer() - START_TIME
-                    time_completed_at = "{:5.2f}s".format(elapsed)
-                    print("{0:<30} {1:>20}".format(base_url, time_completed_at))
+                    time_completed_at = f"{elapsed:5.2f}s"
+                    log_message = f"{base_url:<30} {time_completed_at:>20}"
+                    self.log.lsuccess(log_message)
+                    self.stats.isuccess()
+                else:
+                    self.log.lstatus(str(response.status), base_url)
+                    self.stats.ifail()
                 return await response.text()
+
         except UnicodeError:
-            print('unicode error')
-        except Exception as e:
-            pass
+            self.log.ldebug('Unicode error')
+            self.stats.iexception()
+        except Exception as exc:
+            # TODO: Agarrar específicas de conexión.
+            self.log.lexc(type(exc), EXCEPTION_CODE, base_url)
+            self.stats.iexception()
+        # except Exception as error:
+        #     self.log.exc(type(exc), ERROR_CODE)
 
-    async def bound_fetch(self, sem, session, url):
+    async def bound_fetch(self, sem, session, url, timeout):
         async with sem:
-            await self.fetch(session, url)
+            await self.fetch(session, url, timeout)
 
-    async def get_data(self, urls, workers):
+    async def get_data(self, urls, workers, timeout):
         tasks = []
         sem = asyncio.Semaphore(workers)
+
         async with ClientSession() as session:
+
             for base_url in urls:
-                task = asyncio.ensure_future(self.bound_fetch(sem, session, base_url))
+                task = asyncio.ensure_future(self.bound_fetch(sem, session, base_url, timeout))
                 tasks.append(task)
 
             responses = asyncio.gather(*tasks)
