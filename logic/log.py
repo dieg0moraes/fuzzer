@@ -3,7 +3,7 @@ Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 import logging
 from colorama import Fore, Back
-from .settings import SUCCESS_LEVEL_NUM, EXCEPTION_CODE, ERROR_CODE, CRITICAL_CODE
+from .settings import SUCCESS_LEVEL_NUM, EXCEPTION_CODE, ERROR_CODE, CRITICAL_CODE, EXIT_ON_CRITICAL
 
 
 # New logging level (SUCCESS) #
@@ -77,6 +77,8 @@ class LogWrapper:
                 self.logger.error(exception)
             elif code_num == CRITICAL_CODE:
                 self.logger.critical(exception)
+                if EXIT_ON_CRITICAL:
+                    exit()
 
 
     def lstatus(self, status_code, url):
@@ -95,7 +97,7 @@ class CustomFormatter(logging.Formatter):
     green = Fore.LIGHTGREEN_EX
     red = Fore.LIGHTRED_EX
     bold_red = Back.RED
-    reset = Fore.RESET
+    reset = Fore.RESET + Back.RESET
     format = "[%(levelname)s] %(message)s"
 
     FORMATS = {
