@@ -21,7 +21,18 @@ class Client:
     async def fetch(self, session, base_url, timeout):
         try:
             async with session.get(base_url, timeout=timeout) as response:
-                await response.text()
+
+                if response.status == 200:
+                    elapsed = default_timer() - START_TIME
+                    time_completed_at = f"{elapsed:5.2f}s"
+                    log_message = f"{base_url:<30} {time_completed_at:>20}"
+                    self.log.lsuccess(log_message)
+                    self.stats.isuccess()
+                else:
+                    self.log.lstatus(str(response.status), base_url)
+                    self.stats.ifail()
+                return await response.text()
+
         except UnicodeError:
             self.log.ldebug('Unicode error')
             self.stats.iexception()
