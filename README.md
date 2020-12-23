@@ -1,6 +1,6 @@
 # Fuzzer
 
-MIT License.
+Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 
 ### Set up
 
@@ -35,6 +35,10 @@ Performance options:
 -e (--end)            Index of the last word of the dictionary to test (defaults to the last word of the dictionary).
 -i (--interval)       Number of intervals to execute all the requests (*)
 -t (--timeout)        Timeout for each request (Defaults to 3)
+
+Connection options:
+--tor                 Perform requests over the Tor network
+--proxy               Custom proxy url
 
 Log options:
 
