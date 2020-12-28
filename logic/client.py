@@ -6,7 +6,6 @@ from sys import platform
 from timeit import default_timer
 from aiohttp import ClientSession
 from aiohttp_socks import SocksConnector, ProxyConnector, ProxyConnectionError, SocksConnectionError
-from .settings import EXCEPTION_CODE, ERROR_CODE, CRITICAL_CODE
 
 
 START_TIME = default_timer()
@@ -42,12 +41,12 @@ class Client:
                 return await response.text()
 
         except UnicodeError:
-            self.log.ldebug('Unicode error')
+            self.log.lerr('Unicode error')
             self.stats.iexception()
         except (ProxyConnectionError, SocksConnectionError):
-            self.log.lexc("Proxy Error", CRITICAL_CODE)
+            self.log.lcritical("Proxy Error")
         except Exception as exc:
-            self.log.lexc(type(exc), EXCEPTION_CODE, base_url)
+            self.log.lexc(type(exc), base_url)
             self.stats.iexception()
 
     async def bound_fetch(self, sem, session, url, timeout):

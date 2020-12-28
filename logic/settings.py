@@ -9,11 +9,6 @@ SUCCESS_LEVEL_NUM = 15
 # Default value when --end is missing.
 END_DEFAULT = -1
 
-# LogWrapper error levels.
-EXCEPTION_CODE = 0
-ERROR_CODE = 1
-CRITICAL_CODE = 2
-
 # exit() when logging a critical exception.
 EXIT_ON_CRITICAL = True
 
