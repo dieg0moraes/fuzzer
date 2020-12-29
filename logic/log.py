@@ -3,7 +3,7 @@ Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 import logging
 from colorama import Fore, Back
-from .settings import SUCCESS_LEVEL_NUM, EXCEPTION_CODE, ERROR_CODE, CRITICAL_CODE, EXIT_ON_CRITICAL
+from .settings import SUCCESS_LEVEL_NUM, EXIT_ON_CRITICAL
 
 
 # New logging level (SUCCESS) #
@@ -68,17 +68,24 @@ class LogWrapper:
             self.logger.info(info_text)
 
 
-    def lexc(self, exception, code_num, url=""):
+    def lexc(self, exception, url=""):
         """Log exceptions."""
         if self.exc:
-            if code_num == EXCEPTION_CODE:
-                self.logger.warning('EXCEPTION(%s)::%s', exception, url)
-            elif code_num == ERROR_CODE:
-                self.logger.error(exception)
-            elif code_num == CRITICAL_CODE:
-                self.logger.critical(exception)
-                if EXIT_ON_CRITICAL:
-                    exit()
+            self.logger.warning('EXCEPTION(%s)::%s', exception, url)
+
+
+    def lerr(self, message):
+        """Log errors."""
+        if self.exc:
+            self.logger.error(message)
+
+
+    def lcritical(self, message):
+        """Log critical errors."""
+        # Criticals are always logged.
+        self.logger.critical(message)
+        if EXIT_ON_CRITICAL:
+            exit()
 
 
     def lstatus(self, status_code, url):
@@ -88,6 +95,8 @@ class LogWrapper:
                 self.logger.info('REDIRECT(%s)::%s', status_code, url)
             elif status_code[0] in ("4", "5"):
                 self.logger.info('FAIL(%s)::%s', status_code, url)
+            elif status_code[0] == "1":
+                self.logger.info('INFO(%s)::%s', status_code, url)
 
 
 class CustomFormatter(logging.Formatter):

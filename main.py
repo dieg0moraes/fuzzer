@@ -82,15 +82,20 @@ def main():
 
     main_logger = LogWrapper("main_log", log_config)
 
-    # Fuzzer setup #
+    ## Fuzzer setup ##
     stats = Stats()
 
-    urls = UrlBuilder(args.url, args.dir, args.start, args.end)
+    # Url building #
+    try:
+        urls = UrlBuilder(args.url, args.dir, args.start, args.end)
+    except FileNotFoundError:
+        main_logger.lcritical(f"{args.dir} Not found")
     total_urls = len(urls.urls)
     main_logger.linfo(f"Number of urls to test: {total_urls}")
 
     fuzzer = Fuzzer(urls.urls, args.workers, main_logger, stats, args.timeout, args.tor, args.proxy)
 
+    # Loop setup #
     interval = args.interval
     start = 0
     end = interval
@@ -101,7 +106,7 @@ def main():
 
     loop = asyncio.get_event_loop()
 
-    # Start #
+    # Start execution #
     main_logger.linfo(f"Starting at {datetime.datetime.now()}")
     while True:
         try:
