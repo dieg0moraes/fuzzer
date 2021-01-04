@@ -43,9 +43,13 @@ class Client:
         except UnicodeError:
             self.log.lerr('Unicode error')
             self.stats.iexception()
-        except (ProxyConnectionError, SocksConnectionError):
-            self.log.lcritical("Proxy Error")
+        except (ProxyConnectionError, SocksConnectionError) as exc:
+            if not self.log.enabled:
+                raise exc
+            self.log.lcritical("Proxy or Tor Error")
         except Exception as exc:
+            if not self.log.enabled:
+                raise exc
             self.log.lexc(type(exc), base_url)
             self.stats.iexception()
 

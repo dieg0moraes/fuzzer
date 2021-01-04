@@ -1,15 +1,17 @@
 """
 Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
-from timeit import default_timer
+from datetime import datetime
 
 class Stats:
-    """Statistics for requests."""
+    """Statistics for fuzzer requests."""
 
     def __init__(self):
         self.success = 0
         self.fail = 0
         self.exception = 0
+        self.start_time = None
+        self.end_time = None
 
     def isuccess(self):
         """Increment Success number."""
@@ -23,11 +25,8 @@ class Stats:
         """Increment Exception number."""
         self.exception += 1
 
-    def start_rpm(self):
-        """Start calculating requests per minute."""
-        self.start_time = default_timer()
+    def get_start_time(self):
+        self.start_time = datetime.now()
 
-    def get_rpm(self):
-        """Get RPM."""
-        time = default_timer() - self.start_time
-        # ...
+    def get_end_time(self):
+        self.end_time = datetime.now()
