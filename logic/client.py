@@ -33,8 +33,7 @@ class Client:
                     elapsed = default_timer() - START_TIME
                     time_completed_at = f"{elapsed:5.2f}s"
                     log_message = f"{base_url:<30} {time_completed_at:>20}"
-                    self.log.lsuccess(log_message)
-                    self.stats.isuccess()
+                    self.stats.isuccess(log_message)
                 else:
                     self.log.lstatus(str(response.status), base_url)
                     self.stats.ifail()

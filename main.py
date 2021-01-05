@@ -3,6 +3,7 @@ Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 import argparse
 from logic.fuzzer import Fuzzer
+from logic.fuzzer import TIMEOUT, WORKERS
 
 
 def main():
@@ -17,11 +18,11 @@ def main():
     required.add_argument('-u', '--url', help='Base url', required=True)
     required.add_argument('-d', '--dir', help='dictionary wordlist path', required=True)
 
-    performance.add_argument('-w', '--workers', type=int, help='Numbers of workers')
+    performance.add_argument('-w', '--workers', type=int, help='Numbers of workers', default=WORKERS)
     performance.add_argument('-s', '--start', type=int, help='Start in n dictionary', default=0)
     performance.add_argument('-e', '--end', type=int, help='End in n dictionary')
     performance.add_argument('-i', '--interval', type=int, help='Execution interval', default=0)
-    performance.add_argument('-t', '--timeout', type=float, help='Timeout for each request (Default=3)')
+    performance.add_argument('-t', '--timeout', type=float, help='Timeout for each request (Default=3)', default=TIMEOUT)
 
     connection.add_argument('--tor', help='Perform requests over the Tor network', action='store_true')
     connection.add_argument('--proxy', type=str, help='Custom proxy url')
@@ -64,7 +65,7 @@ def main():
     log_config["file"] = args.logfile
     log_config["colors"] = args.nocolors
 
-    ## Fuzzer setup ##
+    # Fuzzer setup #
     fuzzer = Fuzzer(log_config)
 
     main_logger = fuzzer.logger
@@ -73,7 +74,7 @@ def main():
     fuzzer.set_intervals(args.start, args.end, args.interval)
 
     try:
-        fuzzer.get_urls(args.url, args.dir)
+        fuzzer.get_urls(args.url, args.dir, ask=True)
     except FileNotFoundError:
         main_logger.lcritical(f"{args.dir} Not found")
 
@@ -81,7 +82,9 @@ def main():
     fuzzer.tor = args.tor
     fuzzer.proxy = args.proxy
     fuzzer.timeout = args.timeout
+    fuzzer.workers = args.workers
 
+    # Start execution #
     fuzzer.run()
 
     main_logger.linfo(f"Total found: {fuzzer.stats.success}")

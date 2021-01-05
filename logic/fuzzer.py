@@ -51,19 +51,21 @@ class Fuzzer:
     # pylint: disable=too-many-instance-attributes
 
     def __init__(self, log_config: Dict[str, bool] = {}, show_logs: bool = True):
-        self.logger = LogWrapper("fuzzer_logger", log_config, enabled=show_logs)
-        # TODO: ¿Stats forma parte del frontend?
         # Preguntarle a Diego si lo quiere así o con funciones.
         # Modificando el atributo o con un setter.
-        self.stats = Stats()
+        # Logging attributes.
+        self.logger = LogWrapper("fuzzer_logger", log_config, enabled=show_logs)
+        self.stats = Stats(self.logger)
+        # Performance attributes.
         self.timeout = TIMEOUT
-        self.urls = []
         self.workers = WORKERS
-        self.tor = False
-        self.proxy = None
         self.start = 0
         self.end = None
         self.interval = None
+        # Connection attributes.
+        self.tor = False
+        self.proxy = None
+        self.urls = []
 
 
     async def _fuzz(self, start, end):

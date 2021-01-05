@@ -6,16 +6,19 @@ from datetime import datetime
 class Stats:
     """Statistics for fuzzer requests."""
 
-    def __init__(self):
+    def __init__(self, logger):
         self.success = 0
         self.fail = 0
         self.exception = 0
         self.start_time = None
         self.end_time = None
+        self.log = logger
 
-    def isuccess(self):
+    def isuccess(self, log_message):
         """Increment Success number."""
         self.success += 1
+        if log_message:
+            self.log.lsuccess(log_message)
 
     def ifail(self):
         """Increment Fail number."""
