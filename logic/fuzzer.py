@@ -29,10 +29,12 @@ class Fuzzer:
 
     Parameters
     ----------
+    save: bool
+        Save results to a csv file.
     show_logs: bool
-        set to False to disable logs.
+        Set to False to disable logs.
     log_config: Dict[str, bool]
-        logger configuration.
+        Logger configuration.
         Example:
         log_config = {
             'option': bool,
@@ -50,18 +52,20 @@ class Fuzzer:
     """
     # pylint: disable=too-many-instance-attributes
 
-    def __init__(self, log_config: Dict[str, bool] = {}, show_logs: bool = True):
+    def __init__(self, save: bool = False, log_config: Dict[str, bool] = {}, show_logs: bool = True):
         # Preguntarle a Diego si lo quiere así o con funciones.
         # Modificando el atributo o con un setter.
         # Logging attributes.
         self.logger = LogWrapper("fuzzer_logger", log_config, enabled=show_logs)
-        self.stats = Stats(self.logger)
+        self.stats = Stats(self.logger, save)
+
         # Performance attributes.
         self.timeout = TIMEOUT
         self.workers = WORKERS
         self.start = 0
         self.end = None
         self.interval = None
+
         # Connection attributes.
         self.tor = False
         self.proxy = None
@@ -83,14 +87,21 @@ class Fuzzer:
         """Check arguments before execution"""
         if self.tor and self.proxy:
             raise ConfigError("Cannot use Tor and a custom proxy at the same time.")
-        elif self.timeout < 1:
+        if self.timeout < 1:
             raise ConfigError("Timeout must be grater than 0.")
 
         return True
 
 
-    def run(self):
-        """Start execution"""
+    def run(self, no_stop: bool = False):  # TODO: Ver si hay mucho 200 y preguntar si seguir.
+        """
+        Start execution
+
+        Parameters
+        ----------
+        no_stop: bool
+            Disable query_yes_no.        
+        """
         self._checkrun()
 
         loop_start = 0
@@ -119,6 +130,7 @@ class Fuzzer:
                 loop_start = loop_end
 
         self.stats.get_end_time()
+        self.stats.export_results()
 
 
     def get_urls(self, url: str, dictionary_path: str, ask: bool = False, inject: bool = True):
@@ -155,6 +167,7 @@ class Fuzzer:
             avoid using injections by default.
         """
         url_build = UrlBuilder(url, dictionary_path, self.start, self.end, ask, inject)
+        self.stats.base_url = url
         self.urls = url_build.urls
 
     def reset_urls(self):

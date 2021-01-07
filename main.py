@@ -14,6 +14,7 @@ def main():
     performance = parser.add_argument_group(title='Performance options')
     connection = parser.add_argument_group(title='Connection options')
     log_options = parser.add_argument_group(title='Log options')
+    other = parser.add_argument_group(title='Other options')
 
     required.add_argument('-u', '--url', help='Base url', required=True)
     required.add_argument('-d', '--dir', help='dictionary wordlist path', required=True)
@@ -34,6 +35,8 @@ def main():
     log_options.add_argument('--logall', help='Log everything', action='store_true')
     log_options.add_argument('--logfile', help='Log Output to app.log', action='store_true')
     log_options.add_argument('--nocolors', help='Disable colored logs', action='store_false')
+
+    other.add_argument('-g', '--save', help='Save results to csv file', action='store_true')
 
     args = parser.parse_args()
 
@@ -66,7 +69,7 @@ def main():
     log_config["colors"] = args.nocolors
 
     # Fuzzer setup #
-    fuzzer = Fuzzer(log_config)
+    fuzzer = Fuzzer(args.save, log_config, True)
 
     main_logger = fuzzer.logger
 

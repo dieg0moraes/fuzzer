@@ -60,11 +60,6 @@ class LogWrapper:
             self.logger.disabled = True
 
 
-    def lsuccess(self, text):
-        """Log success (200) messages."""
-        self.logger.success(text)
-
-
     def ldebug(self, debug_text):
         """Log debug messages"""
         if self.debug:
@@ -98,8 +93,10 @@ class LogWrapper:
 
 
     def lstatus(self, status_code, url):
-        """Log other connection status codes (different from 200)"""
-        if self.rstatus:
+        """Log connection status code with url"""
+        if status_code[0] == "2":
+            self.logger.success('(%s) %s', status_code, url)
+        elif self.rstatus:
             if status_code[0] == "3":
                 self.logger.info('REDIRECT(%s)::%s', status_code, url)
             elif status_code[0] in ("4", "5"):
