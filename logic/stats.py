@@ -1,20 +1,27 @@
 """
-Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
+Copyright (c) 2021 Diego Moraes. MIT license, see LICENSE file.
 """
 import csv
 from os import path
+from sys import exit as sysexit
 from datetime import datetime
-from .settings import REGEX_WORD
+from utils import query_yes_no
+from .settings import VDOM_PERCENTAGE
 
 class Stats:
     """Statistics for fuzzer requests."""
 
     def __init__(self, logger, save_results):
-        # Las tres estadísticas podrían ponerse en un diccionario.
+        # ¿Las tres estadísticas podrían ponerse en un diccionario?
         # Statistics.
         self.success = 0
         self.fail = 0
         self.exception = 0
+        self.timeouts = 0
+
+        # Check Virtual DOM
+        self.no_stop = False
+        self.check_vdom = True
 
         # Time
         self.start_time = None
@@ -34,6 +41,8 @@ class Stats:
         self.log.lstatus(status_code, url)
         if self.save_results:
             self.store_results(status_code, url)
+        if self.check_vdom:
+            self.check_vitual_dom()
 
 
     def ifail(self, url, status_code):
@@ -47,6 +56,14 @@ class Stats:
     def iexception(self):
         """Increment Exception number."""
         self.exception += 1
+
+
+    def itimeout(self):
+        """
+        Checks for too many timeouts
+        and increases the time.
+        """
+        pass
 
 
     def get_start_time(self):
@@ -72,10 +89,10 @@ class Stats:
             while True:
                 file_name = f"save{num}.csv"
                 if path.isfile(file_name):
-                   num += 1 
+                    num += 1
                 else:
                     break
-            
+
             # Export results to csv file.
             with open(file_name, "w") as csv_file:
                 csv_writer = csv.writer(csv_file)
@@ -83,3 +100,24 @@ class Stats:
                     status_code_row = result[0:3]
                     url_row = result[4:]
                     csv_writer.writerow([status_code_row, url_row])
+
+
+    def check_vitual_dom(self):
+        """Check virtual DOM redirects"""
+        total = self.success + self.fail
+        if total > 100:  # ¿Qué número debería ser?
+            percentage = VDOM_PERCENTAGE
+            max_success = round((total * percentage) / 100)
+            if self.success >= max_success:
+                self.log.lwarn("Too many 200 responses: this may be because of a vitual DOM.")
+                if not self.no_stop:
+                    if not query_yes_no("Continue?"):
+                        # TODO: Esto podría ser cambiado por una
+                        # excepción.
+                        sysexit(0)
+
+        self.check_vdom = False
+
+
+    def check_timeouts(self):
+        pass

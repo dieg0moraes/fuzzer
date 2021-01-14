@@ -3,7 +3,7 @@ Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 import asyncio
 from math import ceil
-from typing import Dict, Union
+from typing import Dict
 from .client import Client
 from .log import LogWrapper
 from .stats import Stats
@@ -53,8 +53,6 @@ class Fuzzer:
     # pylint: disable=too-many-instance-attributes
 
     def __init__(self, save: bool = False, log_config: Dict[str, bool] = {}, show_logs: bool = True):
-        # Preguntarle a Diego si lo quiere así o con funciones.
-        # Modificando el atributo o con un setter.
         # Logging attributes.
         self.logger = LogWrapper("fuzzer_logger", log_config, enabled=show_logs)
         self.stats = Stats(self.logger, save)
@@ -89,20 +87,25 @@ class Fuzzer:
             raise ConfigError("Cannot use Tor and a custom proxy at the same time.")
         if self.timeout < 1:
             raise ConfigError("Timeout must be grater than 0.")
+        if self.workers < 1:
+            raise ConfigError("Use at least 1 worker.")
 
         return True
 
 
-    def run(self, no_stop: bool = False):  # TODO: Ver si hay mucho 200 y preguntar si seguir.
+    def run(self, no_stop: bool = False):
         """
         Start execution
 
         Parameters
         ----------
         no_stop: bool
-            Disable query_yes_no.        
+            Disable query_yes_no and use
+            defaults to continue running.
         """
         self._checkrun()
+
+        self.stats.no_stop = no_stop
 
         loop_start = 0
         loop_end = self.interval

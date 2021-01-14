@@ -1,5 +1,5 @@
 """
-Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
+Copyright (c) 2021 Diego Moraes. MIT license, see LICENSE file.
 """
 
 # Logging success level number.
@@ -31,3 +31,8 @@ WORKERS = 50
 # After changing this setting
 # you should change the Fuzzer.get_urls.__doc__
 REGEX_WORD = r"\[\*\]"
+
+# Max percentage of success responses
+# (total = success + fail)
+# to detect a possible Virtual DOM.
+VDOM_PERCENTAGE = 60

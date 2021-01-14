@@ -42,19 +42,19 @@ class LogWrapper:
         if self.enabled:
             # File Handler.
             if self.file:
-                self.fh = logging.FileHandler(LOG_FILE_NAME)
-                self.fh.setLevel(logging.DEBUG)
-                self.fh.setFormatter(formatter)
-                self.logger.addHandler(self.fh)
+                fh = logging.FileHandler(LOG_FILE_NAME)
+                fh.setLevel(logging.DEBUG)
+                fh.setFormatter(formatter)
+                self.logger.addHandler(fh)
 
             # Console Handler.
             if self.colors:
                 formatter = _CustomFormatter()
 
-            self.ch = logging.StreamHandler()
-            self.ch.setLevel(logging.DEBUG)
-            self.ch.setFormatter(formatter)
-            self.logger.addHandler(self.ch)
+            ch = logging.StreamHandler()
+            ch.setLevel(logging.DEBUG)
+            ch.setFormatter(formatter)
+            self.logger.addHandler(ch)
 
         else:
             self.logger.disabled = True
@@ -72,21 +72,25 @@ class LogWrapper:
             self.logger.info(info_text)
 
 
+    def lwarn(self, warning):
+        """Log warnings."""
+        self.logger.warning(warning)
+
+
     def lexc(self, exception, url=""):
-        """Log exceptions."""
+        """Unhandled exceptions"""
         if self.exc:
-            self.logger.warning('EXCEPTION(%s)::%s', exception, url)
+            self.logger.error('EXCEPTION(%s)::%s', exception, url)
 
 
     def lerr(self, message):
-        """Log errors."""
+        """Log other errors."""
         if self.exc:
             self.logger.error(message)
 
 
     def lcritical(self, message):
         """Log critical errors."""
-        # Criticals are always logged.
         self.logger.critical(message)
         if EXIT_ON_CRITICAL:
             sysexit(1)
