@@ -2,14 +2,21 @@
 Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 import asyncio
+from sys import platform
 from timeit import default_timer
 from aiohttp import ClientSession
-from .settings import EXCEPTION_CODE, ERROR_CODE
-
-# from aiohttp_socks import ProxyType, ProxyConnector, ChainProxyConnector
+from aiohttp_socks import SocksConnector, ProxyConnector, ProxyConnectionError, SocksConnectionError
 
 
 START_TIME = default_timer()
+
+# Solution to issue #5
+if platform == "darwin":
+    # False: No ssl check.
+    ssl_enabled = False
+else:
+    # None: Default ssl check.
+    ssl_enabled = None
 
 
 class Client:
@@ -20,7 +27,7 @@ class Client:
 
     async def fetch(self, session, base_url, timeout):
         try:
-            async with session.get(base_url, timeout=timeout) as response:
+            async with session.get(base_url, timeout=timeout, allow_redirects=True, ssl=ssl_enabled) as response:
 
                 if response.status == 200:
                     elapsed = default_timer() - START_TIME
@@ -34,24 +41,28 @@ class Client:
                 return await response.text()
 
         except UnicodeError:
-            self.log.ldebug('Unicode error')
+            self.log.lerr('Unicode error')
             self.stats.iexception()
+        except (ProxyConnectionError, SocksConnectionError):
+            self.log.lcritical("Proxy Error")
         except Exception as exc:
-            # TODO: Agarrar específicas de conexión.
-            self.log.lexc(type(exc), EXCEPTION_CODE, base_url)
+            self.log.lexc(type(exc), base_url)
             self.stats.iexception()
-        # except Exception as error:
-        #     self.log.exc(type(exc), ERROR_CODE)
 
     async def bound_fetch(self, sem, session, url, timeout):
         async with sem:
             await self.fetch(session, url, timeout)
 
-    async def get_data(self, urls, workers, timeout):
+    async def get_data(self, urls, workers, timeout, tor, proxy):
         tasks = []
         sem = asyncio.Semaphore(workers)
-
-        async with ClientSession() as session:
+        if tor:
+            connector = SocksConnector.from_url('socks5://localhost:9050')
+        elif proxy:
+            connector = ProxyConnector.from_url(proxy)
+        else:
+            connector = None
+        async with ClientSession(connector=connector) as session:
 
             for base_url in urls:
                 task = asyncio.ensure_future(self.bound_fetch(sem, session, base_url, timeout))

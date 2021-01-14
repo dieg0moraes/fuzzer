@@ -5,11 +5,12 @@ import asyncio
 import argparse
 import datetime
 from math import ceil
+from utils import query_yes_no
 from logic.log import LogWrapper
 from logic.fuzzer import Fuzzer
 from logic.stats import Stats
 from logic.builder import UrlBuilder
-from logic.settings import END_DEFAULT
+from logic.settings import END_DEFAULT, TIMEOUT, WORKERS
 
 
 def main():
@@ -18,16 +19,20 @@ def main():
     parser = argparse.ArgumentParser(description='Fuzzer parameters')
     required = parser.add_argument_group(title='Basic arguments')
     performance = parser.add_argument_group(title='Performance options')
+    connection = parser.add_argument_group(title='Connection options')
     log_options = parser.add_argument_group(title='Log options')
 
     required.add_argument('-u', '--url', help='Base url', required=True)
     required.add_argument('-d', '--dir', help='dictionary wordlist path', required=True)
 
-    performance.add_argument('-w', '--workers', type=int, help='Numbers of workers', default=50)
+    performance.add_argument('-w', '--workers', type=int, help='Numbers of workers', default=WORKERS)
     performance.add_argument('-s', '--start', type=int, help='Start in n dictionary', default=0)
     performance.add_argument('-e', '--end', type=int, help='End in n dictionary', default=END_DEFAULT)
     performance.add_argument('-i', '--interval', type=int, help='Execution interval', required=True)
-    performance.add_argument('-t', '--timeout', type=float, help='Timeout for each request (Default=3)', default=3)
+    performance.add_argument('-t', '--timeout', type=float, help='Timeout for each request (Default=3)', default=TIMEOUT)
+
+    connection.add_argument('--tor', help='Perform requests over the Tor network', action='store_true')
+    connection.add_argument('--proxy', type=str, help='Custom proxy url')
 
     log_options.add_argument('--exceptions', help='Show exception and error messages', action='store_true')
     log_options.add_argument('--rstatus', help='Show response http status code messages', action='store_true')
@@ -39,6 +44,7 @@ def main():
 
     args = parser.parse_args()
 
+    # Auto default end parameter #
     if args.end == END_DEFAULT:
         with open(args.dir, 'r') as dictionary:
             total_lines = 0
@@ -53,6 +59,8 @@ def main():
         parser.error("--interval must not be grater than the difference bethween --start and --end")
     if args.timeout <= 0:
         parser.error("--timeout must be grater than 0")
+    if args.tor and args.proxy:
+        parser.error("Cannot use a Proxy and Tor at the same time")
 
     # Log Setup #
     if args.logall:
@@ -74,51 +82,60 @@ def main():
 
     main_logger = LogWrapper("main_log", log_config)
 
-    # Setup #
+    ## Fuzzer setup ##
     stats = Stats()
-    urls = UrlBuilder(args.url, args.dir, args.start, args.end)
-    main_logger.linfo(f'Number of urls to test: {len(urls.urls)}')
-    fuzzer = Fuzzer(urls.urls, args.workers, main_logger, stats, args.timeout)
 
+    # Url building #
+    try:
+        urls = UrlBuilder(args.url, args.dir, args.start, args.end)
+    except FileNotFoundError:
+        main_logger.lcritical(f"{args.dir} Not found")
+    total_urls = len(urls.urls)
+    main_logger.linfo(f"Number of urls to test: {total_urls}")
+
+    fuzzer = Fuzzer(urls.urls, args.workers, main_logger, stats, args.timeout, args.tor, args.proxy)
+
+    # Loop setup #
     interval = args.interval
     start = 0
     end = interval
-    stop = False
-
-    # urls = fuzzer.get_urls(args.start, args.end)
-    loop = asyncio.get_event_loop()
-
-    hard_end = len(urls.urls) - 1
+    hard_end = total_urls - 1
 
     vueltas = int(ceil((args.end - args.start) / interval))
     vuelta = 0
 
-    # Start #
+    loop = asyncio.get_event_loop()
+
+    # Start execution #
     main_logger.linfo(f"Starting at {datetime.datetime.now()}")
     while True:
-        vuelta += 1
-        main_logger.linfo(f"@-------------{vuelta}/{vueltas}-------------@")
-        future = asyncio.ensure_future(fuzzer.fuzz(start, end+1))
-        loop.run_until_complete(future)
+        try:
+            vuelta += 1
+            main_logger.linfo(f"@-------------{vuelta}/{vueltas}-------------@")
+            # stats.start_rpm()
+            future = asyncio.ensure_future(fuzzer.fuzz(start, end+1))
+            loop.run_until_complete(future)
+            # main_logger.linfo(f"Requests per minute: aprox. {stats.get_rpm()}")
+            # stats.get_rpm()
 
-        if end == hard_end:
+            if end == hard_end:
+                break
+            start = end + 1
+            end += interval
+            if end > hard_end:
+                end = hard_end
+            if start > end:
+                start = end
+        except KeyboardInterrupt:
+            stop = query_yes_no('Stop - Save current state? ')
+            # TODO: Guardar estado.
             break
-        if stop:
-            break
-        start = end + 1
-        end += interval
-        if end > hard_end:
-            end = hard_end
-            stop = True
-        if start > end:
-            start = end
 
     main_logger.linfo(f"Total found: {stats.success}")
     main_logger.linfo(f"Total fails: {stats.fail}")
     main_logger.linfo(f"Total exceptions: {stats.exception}")
     main_logger.linfo(f"Ending at {datetime.datetime.now()}")
     main_logger.linfo("***********END***********")
-    # rs = (grequests.get(u) for u in urlsmap = grequests.map(rs)
 
 
 main()

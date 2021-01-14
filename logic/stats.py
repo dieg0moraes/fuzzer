@@ -1,9 +1,10 @@
 """
 Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
+from timeit import default_timer
 
 class Stats:
-    """Statistics for the status of the requests"""
+    """Statistics for requests."""
 
     def __init__(self):
         self.success = 0
@@ -11,7 +12,7 @@ class Stats:
         self.exception = 0
 
     def isuccess(self):
-        """Increment Success number"""
+        """Increment Success number."""
         self.success += 1
 
     def ifail(self):
@@ -21,3 +22,12 @@ class Stats:
     def iexception(self):
         """Increment Exception number."""
         self.exception += 1
+
+    def start_rpm(self):
+        """Start calculating requests per minute."""
+        self.start_time = default_timer()
+
+    def get_rpm(self):
+        """Get RPM."""
+        time = default_timer() - self.start_time
+        # ...
