@@ -21,15 +21,20 @@ LOG_DEFAULTS = {
 # sys.exit() when logging a critical exception.
 EXIT_ON_CRITICAL = True
 
+# This should not be changed and must not be a positive number.
+# Default value when --end is missing.
+END_DEFAULT = -1
+
 # Default timeout for each request.
 TIMEOUT = 3
+TOR_TIMEOUT = 10
 
 # Default workers.
 WORKERS = 50
 
 # Injection word to look for.
 # After changing this setting
-# you should change the Fuzzer.get_urls.__doc__
+# you should change the Fuzzer.get_urls docstring.
 REGEX_WORD = r"\[\*\]"
 
 # Max percentage of success responses

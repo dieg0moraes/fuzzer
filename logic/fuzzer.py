@@ -9,7 +9,7 @@ from .log import LogWrapper
 from .stats import Stats
 from .builder import UrlBuilder
 from .exceptions import ConfigError
-from .settings import TIMEOUT, WORKERS
+from .settings import TIMEOUT, TOR_TIMEOUT, WORKERS, END_DEFAULT
 
 
 class Fuzzer:
@@ -60,9 +60,12 @@ class Fuzzer:
         # Performance attributes.
         self.timeout = TIMEOUT
         self.workers = WORKERS
-        self.start = 0
-        self.end = None
-        self.interval = None
+        self._interval = None
+
+        # Target attributes
+        self._dictionary = None
+        self._url = None
+        self._range = [0, 0]  # [start, end]
 
         # Connection attributes.
         self.tor = False
@@ -83,35 +86,56 @@ class Fuzzer:
 
     def _checkrun(self):
         """Check arguments before execution"""
-        if self.tor and self.proxy:
-            raise ConfigError("Cannot use Tor and a custom proxy at the same time.")
+        if self.tor:
+            if self.proxy:
+                raise ConfigError("Cannot use Tor and a custom proxy at the same time.")
+
+            # If the default timeout has not been changed and
+            # tor is in use, set timeout to TOR_TIMEOUT.
+            if self.timeout == TIMEOUT:
+                self.timeout = TOR_TIMEOUT
+                self.logger.lwarn(f"No timeout provided, using default: {TOR_TIMEOUT}")
+
         if self.timeout < 1:
             raise ConfigError("Timeout must be grater than 0.")
         if self.workers < 1:
             raise ConfigError("Use at least 1 worker.")
+        if self._range[1] - self._range[0] < self._interval:
+            raise ConfigError("Interval too large")
 
         return True
 
 
-    def run(self, no_stop: bool = False):
+    def run(self, interval_count: int = 0, no_stop: bool = False):
         """
         Start execution
 
         Parameters
         ----------
+        interval_count: int
+            Set custom execution intervals to avoid
+            performance issues. This parameter indicates
+            the number of requests per interval.
+            Defaults to the total number of requests, creating
+            only 1 execution interval.
         no_stop: bool
             Disable query_yes_no and use
             defaults to continue running.
         """
+        if interval_count == 0:
+            self._interval = self._range[1] - self._range[0]
+        else:
+            self._interval = interval_count
+
         self._checkrun()
 
         self.stats.no_stop = no_stop
 
         loop_start = 0
-        loop_end = self.interval
-        hard_end = len(self.urls) - 1
+        loop_end = self._interval
+        hard_end = len(self.urls)
 
-        total_loop_count = int(ceil((self.end - self.start) / self.interval))
+        total_loop_count = int(ceil((self._range[1] - self._range[0]) / self._interval))
         loop_count = 0
 
         loop = asyncio.get_event_loop()
@@ -126,7 +150,7 @@ class Fuzzer:
             if loop_end == hard_end:
                 break
             loop_start = loop_end + 1
-            loop_end += self.interval
+            loop_end += self._interval
             if loop_end > hard_end:
                 loop_end = hard_end
             if loop_start > loop_end:
@@ -136,91 +160,76 @@ class Fuzzer:
         self.stats.export_results()
 
 
-    def get_urls(self, url: str, dictionary_path: str, ask: bool = False, inject: bool = True):
+    def build_urls(self, ask: bool = False, inject: bool = True):
         """
         Build urls to test
 
+        Use set_target before this.
+
         Parameters
         ----------
-        url: str
-            You may add "[*] to set a custom injection point,
-            for example:
-
-                "https://[*].example.com/" will be:
-                "https://<word>.example.com/"
-
-            by default, it will go at the end of the url:
-
-                "https://www.example.com/[*]"
-
-        dictionary_path: str
-            Path to the file with the words to test.
-
-            Dictionary must have one word per line.
-            Example:
-
-                "/example/files/dictionary.txt"
-
         ask: bool
             ask before using an injection "[*]".
             Set True only when using CLI.
-
         inject: bool
             if ask = False, set this to False to
             avoid using injections by default.
         """
-        url_build = UrlBuilder(url, dictionary_path, self.start, self.end, ask, inject)
-        self.stats.base_url = url
+        if not self._url or not self._dictionary:
+            raise ConfigError("Missing settings, try using set_target before this.")
+        url_build = UrlBuilder(self._url, self._dictionary, self._range, ask, inject)
         self.urls = url_build.urls
 
-    def reset_urls(self):
-        """Reset (delete) the existing url list"""
-        self.urls = []
 
-    def set_intervals(self, start: int, end: int, interval_count: int = 0):
+    def set_target(self, dictionary: str, url: str, start: int = 0, end: int = END_DEFAULT):
         """
         Set execution intervals.
 
-        Use this before get_urls or
+        Use this before build_urls or
         use reset_urls after building urls
         to be able to use this.
 
         Parameters
         ----------
+        dictionary_path: str
+            Path to the file with the words to test.
+            Dictionary must have one word per line.
+        url: str
+            You may add "[*]" to set a custom injection point,
+            for example:
+
+                "https://[*].example.com/" will be:
+                "https://word.example.com/"
+
+            by default, it will go at the end of the url:
+
+                "https://www.example.com/[*]"
         start: int
             Index of the first word in the dictionary to use.
             Defaults to 0.
         end: int
             Index of the last word to use.
             Defaults to the last word in the dictionary.
-        interval_count: int
-            Set custom execution intervals to avoid
-            performance issues. This parameter indicates
-            the number of requests per interval.
-            Defaults to the total number of requests creating
-            only 1 execution interval.
         """
-        # Check parameters.
-        if self.urls:
-            raise ConfigError("Cannot set intervals after building urls, use reset_urls.")
-
-        params = [start, end, interval_count]
+        # Checking parameters.
+        params = [start, end]
         for param in params:
             if not isinstance(param, int):
-                raise ConfigError("Parameters must be int type.")
+                raise ConfigError(f"{param} parameter must be int type.")
         del params
 
-        if start < 0 or end < 0 or interval_count < 0:
+        if end == END_DEFAULT:
+            end = 0
+            for _ in open(dictionary, 'r'):
+                end += 1
+
+        if start < 0 or end < 0:
             raise ConfigError("Parameters must be positive numbers.")
         if start >= end:
             raise ConfigError("start parameter must be smaller than end.")
-        if end - start < interval_count:
-            raise ConfigError("interval_count must not be grater than the difference bethween start and end.")
 
-        # Set intervals.
-        self.start = start
-        self.end = end
-        if interval_count == 0:
-            self.interval = end - start
-        else:
-            self.interval = interval_count
+        # Setter.
+        self._range[0] = start
+        self._range[1] = end
+        self._url = url
+        self._dictionary = dictionary

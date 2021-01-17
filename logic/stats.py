@@ -76,7 +76,7 @@ class Stats:
 
 
     def store_results(self, status_code, url):
-        # TODO: ¿Qué códigos guarda?
+        # TODO: Pasar a settings.
         if status_code[0] in ("2", "3") or status_code in ("401", "403"):
             self.save_list.append(f"{status_code}|{url}")
 
@@ -96,7 +96,9 @@ class Stats:
             # Export results to csv file.
             with open(file_name, "w") as csv_file:
                 csv_writer = csv.writer(csv_file)
+                csv_writer.writerow(["status code", "url"])
                 for result in self.save_list:
+                    # Trim save_list string before writing.
                     status_code_row = result[0:3]
                     url_row = result[4:]
                     csv_writer.writerow([status_code_row, url_row])
@@ -116,7 +118,7 @@ class Stats:
                         # excepción.
                         sysexit(0)
 
-        self.check_vdom = False
+                self.check_vdom = False
 
 
     def check_timeouts(self):

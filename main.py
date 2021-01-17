@@ -4,6 +4,7 @@ Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 import argparse
 from logic.fuzzer import Fuzzer
 from logic.fuzzer import TIMEOUT, WORKERS
+from logic.settings import END_DEFAULT
 
 
 def main():
@@ -21,7 +22,7 @@ def main():
 
     performance.add_argument('-w', '--workers', type=int, help='Numbers of workers', default=WORKERS)
     performance.add_argument('-s', '--start', type=int, help='Start in n dictionary', default=0)
-    performance.add_argument('-e', '--end', type=int, help='End in n dictionary')
+    performance.add_argument('-e', '--end', type=int, help='End in n dictionary', default=END_DEFAULT)
     performance.add_argument('-i', '--interval', type=int, help='Execution interval', default=0)
     performance.add_argument('-t', '--timeout', type=float, help='Timeout for each request (Default=3)', default=TIMEOUT)
 
@@ -41,11 +42,12 @@ def main():
     args = parser.parse_args()
 
     # Check arguments #
-    if args.start >= args.end:
-        parser.error("--end must be grater than --start")
-    if args.interval > args.end - args.start:
-        parser.error("--interval must not be grater than the difference bethween --start and --end")
-    if args.timeout <= 0:
+    if args.end != END_DEFAULT:
+        if args.start >= args.end:
+            parser.error("--end must be grater than --start")
+        if args.interval > args.end - args.start:
+            parser.error("--interval must not be grater than the difference bethween --start and --end")
+    if args.timeout < 1:
         parser.error("--timeout must be grater than 0")
     if args.tor and args.proxy:
         parser.error("Cannot use a Proxy and Tor at the same time")
@@ -74,10 +76,9 @@ def main():
     main_logger = fuzzer.logger
 
     # Url building #
-    fuzzer.set_intervals(args.start, args.end, args.interval)
-
     try:
-        fuzzer.get_urls(args.url, args.dir, ask=True)
+        fuzzer.set_target(args.dir, args.url, args.start, args.end)
+        fuzzer.build_urls(ask=True)
     except FileNotFoundError:
         main_logger.lcritical(f"{args.dir} Not found")
 
@@ -88,7 +89,7 @@ def main():
     fuzzer.workers = args.workers
 
     # Start execution #
-    fuzzer.run()
+    fuzzer.run(args.interval)
 
     main_logger.linfo(f"Total found: {fuzzer.stats.success}")
     main_logger.linfo(f"Total fails: {fuzzer.stats.fail}")

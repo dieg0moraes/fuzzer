@@ -3,16 +3,17 @@ Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 from re import sub, search
 from .settings import REGEX_WORD
+from .exceptions import BuildError
 from utils import query_yes_no
 
 
 class UrlBuilder:
     """Url building class"""
-    def __init__(self, target_url, directory, start, end, ask, inject):
+    def __init__(self, target_url, directory, word_range, ask, inject):
         self.target_url = target_url
         self.directory = directory
-        self.start = start
-        self.end = end
+        self.start = word_range[0]
+        self.end = word_range[1]
         self.ask = ask
         self.inject_by_default = inject
         self.urls = self.builder()
@@ -22,6 +23,8 @@ class UrlBuilder:
         self.main_url = self.find_inject()
         words = self.get_wordlist()
         urls = self.get_urls(words)
+        if not urls:
+            raise BuildError("No urls to build, check start and end parameters.")
         return urls
 
 
@@ -46,13 +49,11 @@ class UrlBuilder:
         """Get words from dictionary."""
         with open(self.directory, 'r') as dictionary:
             words = []
-            if not self.end:
-                for word in dictionary:
+            for index, word in enumerate(dictionary):
+                if index >= self.start and index <= self.end:
                     words.append(word.strip())
-            else:
-                for index, word in enumerate(dictionary):
-                    if index >= self.start and index <= self.end:
-                        words.append(word.strip())
+                if index == self.end:
+                    break
             return words
 
 
