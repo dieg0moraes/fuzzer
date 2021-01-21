@@ -41,3 +41,11 @@ REGEX_WORD = r"\[\*\]"
 # (total = success + fail)
 # to detect a possible Virtual DOM.
 VDOM_PERCENTAGE = 60
+
+# Request status code to save.
+# Setting only the first number will
+# save all the status codes with that number.
+STATUS_TO_SAVE = [
+    "1", "2", "3", "401", "403", "407", "410",
+    "512"
+]

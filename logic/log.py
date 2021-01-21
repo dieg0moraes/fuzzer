@@ -23,7 +23,7 @@ class LogWrapper:
     """Logging wrapper class"""
     # pylint: disable=too-many-instance-attributes
 
-    def __init__(self, name, config={}, enabled=True):  # FIXME: ¿No es seguro config={}?
+    def __init__(self, name, config={}, enabled=True):
 
         self.info = config.get("info", LOG_DEFAULTS["info"])
         self.rstatus = config.get("status", LOG_DEFAULTS["status"])

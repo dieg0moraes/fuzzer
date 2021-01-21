@@ -70,6 +70,7 @@ class Fuzzer:
         # Connection attributes.
         self.tor = False
         self.proxy = None
+        # TODO: objeto.
         self.urls = []
 
 
@@ -133,7 +134,6 @@ class Fuzzer:
 
         loop_start = 0
         loop_end = self._interval
-        hard_end = len(self.urls)
 
         total_loop_count = int(ceil((self._range[1] - self._range[0]) / self._interval))
         loop_count = 0
@@ -141,20 +141,14 @@ class Fuzzer:
         loop = asyncio.get_event_loop()
 
         self.stats.get_start_time()
-        while True:
+
+        while self.urls:
             loop_count += 1
             self.logger.linfo(f"@-------------{loop_count}/{total_loop_count}-------------@")
             future = asyncio.ensure_future(self._fuzz(loop_start, loop_end+1))
             loop.run_until_complete(future)
 
-            if loop_end == hard_end:
-                break
-            loop_start = loop_end + 1
-            loop_end += self._interval
-            if loop_end > hard_end:
-                loop_end = hard_end
-            if loop_start > loop_end:
-                loop_start = loop_end
+            del self.urls[loop_start:loop_end+1]
 
         self.stats.get_end_time()
         self.stats.export_results()

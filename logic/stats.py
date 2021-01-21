@@ -6,7 +6,7 @@ from os import path
 from sys import exit as sysexit
 from datetime import datetime
 from utils import query_yes_no
-from .settings import VDOM_PERCENTAGE
+from .settings import VDOM_PERCENTAGE, STATUS_TO_SAVE
 
 class Stats:
     """Statistics for fuzzer requests."""
@@ -76,8 +76,7 @@ class Stats:
 
 
     def store_results(self, status_code, url):
-        # TODO: Pasar a settings.
-        if status_code[0] in ("2", "3") or status_code in ("401", "403"):
+        if status_code[0] in STATUS_TO_SAVE or status_code in STATUS_TO_SAVE:
             self.save_list.append(f"{status_code}|{url}")
 
 
