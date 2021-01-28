@@ -2,8 +2,9 @@
 Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 import logging
+from sys import exit as sysexit
 from colorama import Fore, Back
-from .settings import SUCCESS_LEVEL_NUM, EXIT_ON_CRITICAL
+from .settings import SUCCESS_LEVEL_NUM, LOG_FILE_NAME, LOG_DEFAULTS, EXIT_ON_CRITICAL
 
 
 # New logging level (SUCCESS) #
@@ -20,40 +21,43 @@ logging.__all__ += ['SUCCESS']
 
 class LogWrapper:
     """Logging wrapper class"""
+    # pylint: disable=too-many-instance-attributes
 
-    def __init__(self, name, config):
+    def __init__(self, name, config={}, enabled=True):
 
-        self.info = config["info"]
-        self.rstatus = config["status"]
-        self.exc = config["exceptions"]
-        self.debug = config["debug"]
+        self.info = config.get("info", LOG_DEFAULTS["info"])
+        self.rstatus = config.get("status", LOG_DEFAULTS["status"])
+        self.exc = config.get("exceptions", LOG_DEFAULTS["exceptions"])
+        self.debug = config.get("debug", LOG_DEFAULTS["debug"])
+        self.file = config.get("file", LOG_DEFAULTS["file"])
+        self.colors = config.get("colors", LOG_DEFAULTS["colors"])
+        self.enabled = enabled
 
         # Get new logger.
         self.logger = logging.getLogger(name)
         self.logger.setLevel(logging.DEBUG)
 
-        formatter = logging.Formatter('[%(levelname)s] %(message)s')
+        formatter = logging.Formatter('[%(module)s][%(levelname)s] %(message)s')
 
-        # File Handler.
-        if config["file"]:
-            self.fh = logging.FileHandler('app.log')
-            self.fh.setLevel(logging.DEBUG)
-            self.fh.setFormatter(formatter)
-            self.logger.addHandler(self.fh)
+        if self.enabled:
+            # File Handler.
+            if self.file:
+                fh = logging.FileHandler(LOG_FILE_NAME)
+                fh.setLevel(logging.DEBUG)
+                fh.setFormatter(formatter)
+                self.logger.addHandler(fh)
 
-        # Console Handler.
-        if config["colors"]:
-            formatter = CustomFormatter()
+            # Console Handler.
+            if self.colors:
+                formatter = _CustomFormatter()
 
-        self.ch = logging.StreamHandler()
-        self.ch.setLevel(logging.DEBUG)
-        self.ch.setFormatter(formatter)
-        self.logger.addHandler(self.ch)
+            ch = logging.StreamHandler()
+            ch.setLevel(logging.DEBUG)
+            ch.setFormatter(formatter)
+            self.logger.addHandler(ch)
 
-
-    def lsuccess(self, text):
-        """Log success (200) messages."""
-        self.logger.success(text)
+        else:
+            self.logger.disabled = True
 
 
     def ldebug(self, debug_text):
@@ -68,29 +72,35 @@ class LogWrapper:
             self.logger.info(info_text)
 
 
+    def lwarn(self, warning):
+        """Log warnings."""
+        self.logger.warning(warning)
+
+
     def lexc(self, exception, url=""):
-        """Log exceptions."""
+        """Unhandled exceptions"""
         if self.exc:
-            self.logger.warning('EXCEPTION(%s)::%s', exception, url)
+            self.logger.error('EXCEPTION(%s)::%s', exception, url)
 
 
     def lerr(self, message):
-        """Log errors."""
+        """Log other errors."""
         if self.exc:
             self.logger.error(message)
 
 
     def lcritical(self, message):
         """Log critical errors."""
-        # Criticals are always logged.
         self.logger.critical(message)
         if EXIT_ON_CRITICAL:
-            exit()
+            sysexit(1)
 
 
     def lstatus(self, status_code, url):
-        """Log other connection status codes (different from 200)"""
-        if self.rstatus:
+        """Log connection status code with url"""
+        if status_code[0] == "2":
+            self.logger.success('(%s) %s', status_code, url)
+        elif self.rstatus:
             if status_code[0] == "3":
                 self.logger.info('REDIRECT(%s)::%s', status_code, url)
             elif status_code[0] in ("4", "5"):
@@ -99,7 +109,7 @@ class LogWrapper:
                 self.logger.info('INFO(%s)::%s', status_code, url)
 
 
-class CustomFormatter(logging.Formatter):
+class _CustomFormatter(logging.Formatter):
     """Logging Formatter to add colors"""
 
     yellow = Fore.LIGHTYELLOW_EX
