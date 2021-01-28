@@ -91,11 +91,8 @@ def main():
     # Start execution #
     fuzzer.run(args.interval)
 
-    main_logger.linfo(f"Total found: {fuzzer.stats.success}")
-    main_logger.linfo(f"Total fails: {fuzzer.stats.fail}")
-    main_logger.linfo(f"Total exceptions: {fuzzer.stats.exception}")
-    main_logger.linfo(f"Start at {fuzzer.stats.start_time}")
-    main_logger.linfo(f"End at {fuzzer.stats.end_time}")
+    fuzzer.print_stats()
+
     main_logger.linfo("***********END***********")
 
 

@@ -3,7 +3,7 @@ Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 import asyncio
 from sys import platform
-from timeit import default_timer
+# from timeit import default_timer
 from aiohttp import ClientSession
 from aiohttp_socks import SocksConnector, ProxyConnector, ProxyConnectionError, SocksConnectionError
 
@@ -13,10 +13,10 @@ from aiohttp_socks import SocksConnector, ProxyConnector, ProxyConnectionError, 
 # Solution to issue #5
 if platform == "darwin":
     # False: No ssl check.
-    ssl_enabled = False
+    SSL_ENABLED = False
 else:
     # None: Default ssl check.
-    ssl_enabled = None
+    SSL_ENABLED = None
 
 
 class Client:
@@ -27,7 +27,7 @@ class Client:
 
     async def fetch(self, session, url, timeout):
         try:
-            async with session.get(url, timeout=timeout, allow_redirects=True, ssl=ssl_enabled) as response:
+            async with session.get(url, timeout=timeout, allow_redirects=True, ssl=SSL_ENABLED) as response:
 
                 if str(response.status)[0] == "2":
                     # elapsed = default_timer() - START_TIME

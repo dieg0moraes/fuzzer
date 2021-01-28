@@ -70,7 +70,6 @@ class Fuzzer:
         # Connection attributes.
         self.tor = False
         self.proxy = None
-        # TODO: objeto.
         self.urls = []
 
 
@@ -107,7 +106,7 @@ class Fuzzer:
         return True
 
 
-    def run(self, interval_count: int = 0, no_stop: bool = False):
+    def run(self, interval_count: int = 0):
         """
         Start execution
 
@@ -119,18 +118,15 @@ class Fuzzer:
             the number of requests per interval.
             Defaults to the total number of requests, creating
             only 1 execution interval.
-        no_stop: bool
-            Disable query_yes_no and use
-            defaults to continue running.
         """
+        self.stats.reset_stats()
+
         if interval_count == 0:
             self._interval = self._range[1] - self._range[0]
         else:
             self._interval = interval_count
 
         self._checkrun()
-
-        self.stats.no_stop = no_stop
 
         loop_start = 0
         loop_end = self._interval
@@ -142,16 +138,22 @@ class Fuzzer:
 
         self.stats.get_start_time()
 
-        while self.urls:
-            loop_count += 1
-            self.logger.linfo(f"@-------------{loop_count}/{total_loop_count}-------------@")
-            future = asyncio.ensure_future(self._fuzz(loop_start, loop_end+1))
-            loop.run_until_complete(future)
+        try:
+            while self.urls:
+                loop_count += 1
+                self.logger.linfo(f"@-------------{loop_count}/{total_loop_count}-------------@")
+                future = asyncio.ensure_future(self._fuzz(loop_start, loop_end+1))
+                loop.run_until_complete(future)
 
-            del self.urls[loop_start:loop_end+1]
-
-        self.stats.get_end_time()
-        self.stats.export_results()
+                del self.urls[loop_start:loop_end+1]
+        except KeyboardInterrupt:
+            self.logger.lerr("I've been interrupted :(")
+        finally:
+            # Always wipe tasks and urls.
+            future.cancel()
+            del self.urls[:]
+            self.stats.get_end_time()
+            self.stats.export_results()
 
 
     def build_urls(self, ask: bool = False, inject: bool = True):
@@ -227,3 +229,12 @@ class Fuzzer:
         self._range[1] = end
         self._url = url
         self._dictionary = dictionary
+
+
+    def print_stats(self):
+        """Print result statistics"""
+        self.logger.linfo(f"Total found: {self.stats.success}")
+        self.logger.linfo(f"Total fails: {self.stats.fail}")
+        self.logger.linfo(f"Total exceptions: {self.stats.exception}")
+        self.logger.linfo(f"Start at {self.stats.start_time}")
+        self.logger.linfo(f"End at {self.stats.end_time}")

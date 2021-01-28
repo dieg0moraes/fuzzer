@@ -3,9 +3,7 @@ Copyright (c) 2021 Diego Moraes. MIT license, see LICENSE file.
 """
 import csv
 from os import path
-from sys import exit as sysexit
 from datetime import datetime
-from utils import query_yes_no
 from .settings import VDOM_PERCENTAGE, STATUS_TO_SAVE
 
 class Stats:
@@ -20,7 +18,6 @@ class Stats:
         self.timeouts = 0
 
         # Check Virtual DOM
-        self.no_stop = False
         self.check_vdom = True
 
         # Time
@@ -106,19 +103,24 @@ class Stats:
     def check_vitual_dom(self):
         """Check virtual DOM redirects"""
         total = self.success + self.fail
-        if total > 100:  # ¿Qué número debería ser?
+        if total > 100:  # TODO: Mover a settings.
             percentage = VDOM_PERCENTAGE
             max_success = round((total * percentage) / 100)
             if self.success >= max_success:
-                self.log.lwarn("Too many 200 responses: this may be because of a vitual DOM.")
-                if not self.no_stop:
-                    if not query_yes_no("Continue?"):
-                        # TODO: Esto podría ser cambiado por una
-                        # excepción.
-                        sysexit(0)
-
                 self.check_vdom = False
+                self.log.lwarn("Too many 200 responses: this may be because of a vitual DOM.")
 
 
     def check_timeouts(self):
         pass
+
+
+    def reset_stats(self):
+        self.success = 0
+        self.fail = 0
+        self.exception = 0
+        self.timeouts = 0
+        self.start_time = None
+        self.end_time = None
+        self.save_list = []
+        self.check_vdom = True
