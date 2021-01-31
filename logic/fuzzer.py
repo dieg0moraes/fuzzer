@@ -3,7 +3,8 @@ Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 import asyncio
 from math import ceil
-from typing import Dict
+from sys import platform
+from typing import Dict, Union
 from .client import Client
 from .log import LogWrapper
 from .stats import Stats
@@ -71,6 +72,7 @@ class Fuzzer:
         self.tor = False
         self.proxy = None
         self.urls = []
+        self.ssl_check = None
 
 
     async def _fuzz(self, start, end):
@@ -79,7 +81,7 @@ class Fuzzer:
 
 
     async def _get_results(self, start, end):
-        client = Client(self.logger, self.stats)
+        client = Client(self.logger, self.stats, self.ssl_check)
         data = await client.get_data(self.urls[start:end], self.workers, self.timeout, self.tor, self.proxy)
         return data
 
@@ -106,7 +108,7 @@ class Fuzzer:
         return True
 
 
-    def run(self, interval_count: int = 0):
+    def run(self, interval_count: int = 0, ssl_check: Union[None, bool] = None):
         """
         Start execution
 
@@ -118,8 +120,24 @@ class Fuzzer:
             the number of requests per interval.
             Defaults to the total number of requests, creating
             only 1 execution interval.
+        ssl_check: None, bool
+            Set True or False to force Client to check
+            ssl. Leave None for default option.
         """
         self.stats.reset_stats()
+
+        if ssl_check is None:
+            # Solution to issue #5
+            if platform == "darwin":
+                # False: No ssl check.
+                self.ssl_check = False
+            else:
+                # None: Default ssl check.
+                self.ssl_check = None
+        elif ssl_check:
+            self.ssl_check = None
+        elif not ssl_check:
+            self.ssl_check = False
 
         if interval_count == 0:
             self._interval = self._range[1] - self._range[0]
@@ -142,15 +160,18 @@ class Fuzzer:
             while self.urls:
                 loop_count += 1
                 self.logger.linfo(f"@-------------{loop_count}/{total_loop_count}-------------@")
-                future = asyncio.ensure_future(self._fuzz(loop_start, loop_end+1))
+                future = asyncio.ensure_future(self._fuzz(loop_start, loop_end+1), loop=loop)
                 loop.run_until_complete(future)
 
                 del self.urls[loop_start:loop_end+1]
         except KeyboardInterrupt:
             self.logger.lerr("I've been interrupted :(")
         finally:
+            self.logger.linfo(f"@-----------------------------@")
             # Always wipe tasks and urls.
             future.cancel()
+            loop.stop()
+            # loop.close()
             del self.urls[:]
             self.stats.get_end_time()
             self.stats.export_results()

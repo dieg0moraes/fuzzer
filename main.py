@@ -28,6 +28,7 @@ def main():
 
     connection.add_argument('--tor', help='Perform requests over the Tor network', action='store_true')
     connection.add_argument('--proxy', type=str, help='Custom proxy url')
+    # TODO: Add ssl argument for fuzzer.run(ssl_check)
 
     log_options.add_argument('--exceptions', help='Show exception and error messages', action='store_true')
     log_options.add_argument('--rstatus', help='Show response http status code messages', action='store_true')
