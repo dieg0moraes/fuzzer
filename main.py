@@ -99,4 +99,5 @@ def main():
     main_logger.linfo("***********END***********")
 
 
-main()
+if __name__ == '__main__':
+    main()
