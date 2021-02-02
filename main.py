@@ -28,15 +28,18 @@ def main():
 
     connection.add_argument('--tor', help='Perform requests over the Tor network', action='store_true')
     connection.add_argument('--proxy', type=str, help='Custom proxy url')
-    connection.add_argument('--checkSSL', type=int, help='0 = Default, 1 = Force check, 2 = Disable', default=0)
+    connection.add_argument('--check-ssl',
+                            type=int, help='0 = Default, 1 = Force check, 2 = Disable',
+                            choices=[0, 1, 2], dest='checkssl', default=0)
 
     log_options.add_argument('--exceptions', help='Show exception and error messages', action='store_true')
-    log_options.add_argument('--rstatus', help='Show response http status code messages', action='store_true')
-    log_options.add_argument('--noinfo', help='Do not show info messages', action='store_false')
+    log_options.add_argument('--log-status', help='Show response http status code messages', action='store_true', dest='rstatus')
+    log_options.add_argument('--no-info', help='Do not show info messages',
+                             dest='noinfo', action='store_false')
     log_options.add_argument('--debug', help='Show debug messages', action='store_true')
-    log_options.add_argument('--logall', help='Log everything', action='store_true')
-    log_options.add_argument('--logfile', help='Log Output to app.log', action='store_true')
-    log_options.add_argument('--nocolors', help='Disable colored logs', action='store_false')
+    log_options.add_argument('--log-all', help='Log everything', action='store_true', dest='logall')
+    log_options.add_argument('--log-file', help='Log Output to app.log', action='store_true', dest='logfile')
+    log_options.add_argument('--no-colors', help='Disable colored logs', action='store_false', dest='nocolors')
 
     other.add_argument('-g', '--save', help='Save results to csv file', action='store_true')
 
@@ -45,21 +48,22 @@ def main():
     # Check arguments #
     if args.end != END_DEFAULT:
         if args.start >= args.end:
-            parser.error("--end must be grater than --start")
+            parser.error("--end must be greater than --start")
         if args.interval > args.end - args.start:
-            parser.error("--interval must not be grater than the difference bethween --start and --end")
+            parser.error(
+                "--interval must not be greater than the difference bethween --start and --end")
     if args.timeout < 1:
-        parser.error("--timeout must be grater than 0")
+        parser.error("--timeout must be greater than 0")
     if args.workers < 1:
-        parser.error("--workers must be grater than 0")
+        parser.error("--workers must be greater than 0")
     if args.tor and args.proxy:
         parser.error("Cannot use a Proxy and Tor at the same time")
 
-    if args.checkSSL == 0:
+    if args.checkssl == 0:
         ssl = None
-    elif args.checkSSL == 1:
+    elif args.checkssl == 1:
         ssl = True
-    elif args.checkSSL == 2:
+    elif args.checkssl == 2:
         ssl = False
     else:
         parser.error("Invalid value for checkSSL")

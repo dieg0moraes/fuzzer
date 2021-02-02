@@ -37,7 +37,7 @@ Performance options:
 Connection options:
 --tor                 Perform requests over the Tor network
 --proxy               Custom proxy url
---checkSSL            Check SSL certificates
+--check-ssl           Check SSL certificates
                       0: Use default
                       1: Force check
                       2: Disable
@@ -45,12 +45,12 @@ Connection options:
 Log options:
 
 --exceptions          Show exception and error messages
---rstatus             Show response http status code messages (200 status code is always logged)
---noinfo              Do not show info messages (Not recommended)
+--log-status          Show response http status code messages (200 status code is always logged)
+--no-info             Do not show info messages (Not recommended)
 --debug               Show debug messages
---logall              Log everything
---logfile             Log output to app.log
---nocolors            Disable colored logs
+--log-all             Log everything
+--log-file            Log output to app.log
+--no-colors           Disable colored logs
 
 Other:
 

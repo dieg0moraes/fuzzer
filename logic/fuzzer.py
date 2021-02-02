@@ -99,7 +99,7 @@ class Fuzzer:
                 self.logger.lwarn(f"No timeout provided, using default: {TOR_TIMEOUT}")
 
         if self.timeout < 1:
-            raise ConfigError("Timeout must be grater than 0.")
+            raise ConfigError("Timeout must be greater than 0.")
         if self.workers < 1:
             raise ConfigError("Use at least 1 worker.")
         if self._range[1] - self._range[0] < self._interval:
