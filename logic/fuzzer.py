@@ -160,7 +160,7 @@ class Fuzzer:
             while self.urls:
                 loop_count += 1
                 self.logger.linfo(f"@-------------{loop_count}/{total_loop_count}-------------@")
-                future = asyncio.ensure_future(self._fuzz(loop_start, loop_end+1), loop=loop)
+                future = asyncio.ensure_future(self._fuzz(loop_start, loop_end+1))
                 loop.run_until_complete(future)
 
                 del self.urls[loop_start:loop_end+1]
@@ -170,8 +170,6 @@ class Fuzzer:
             self.logger.linfo(f"@-----------------------------@")
             # Always wipe tasks and urls.
             future.cancel()
-            loop.stop()
-            # loop.close()
             del self.urls[:]
             self.stats.get_end_time()
             self.stats.export_results()
@@ -254,8 +252,8 @@ class Fuzzer:
 
     def print_stats(self):
         """Print result statistics"""
-        self.logger.linfo(f"Total found: {self.stats.success}")
-        self.logger.linfo(f"Total fails: {self.stats.fail}")
-        self.logger.linfo(f"Total exceptions: {self.stats.exception}")
+        self.logger.linfo("Results:")
+        for key, value in self.stats.req_stats.items():
+            self.logger.linfo(f"{key}: {value}")
         self.logger.linfo(f"Start at {self.stats.start_time}")
         self.logger.linfo(f"End at {self.stats.end_time}")

@@ -23,7 +23,9 @@ class Client:
                     self.stats.ifail(url, str(response.status))
                 await response.text()
 
-        # Estas except podrían irse para fuzzer.run().
+        except asyncio.exceptions.TimeoutError:
+            self.log.linfo(f'TIMEOUT::{url}')
+            self.stats.itimeout()
         except UnicodeError:
             self.log.lerr('Unicode error')
             self.stats.iexception()
