@@ -3,9 +3,7 @@ Copyright (c) 2021 Diego Moraes. MIT license, see LICENSE file.
 """
 import csv
 from os import path
-from sys import exit as sysexit
 from datetime import datetime
-from utils import query_yes_no
 from .settings import VDOM_PERCENTAGE, STATUS_TO_SAVE
 
 class Stats:
@@ -14,13 +12,14 @@ class Stats:
     def __init__(self, logger, save_results):
         # ¿Las tres estadísticas podrían ponerse en un diccionario?
         # Statistics.
-        self.success = 0
-        self.fail = 0
-        self.exception = 0
-        self.timeouts = 0
+        self.req_stats = {
+            'success': 0,
+            'fail': 0,
+            'exception': 0,
+            'timeout': 0
+        }
 
         # Check Virtual DOM
-        self.no_stop = False
         self.check_vdom = True
 
         # Time
@@ -37,7 +36,7 @@ class Stats:
 
     def isuccess(self, url, status_code):
         """Increment Success number."""
-        self.success += 1
+        self.req_stats['success'] += 1
         self.log.lstatus(status_code, url)
         if self.save_results:
             self.store_results(status_code, url)
@@ -47,7 +46,7 @@ class Stats:
 
     def ifail(self, url, status_code):
         """Increment Fail number."""
-        self.fail += 1
+        self.req_stats['fail'] += 1
         self.log.lstatus(status_code, url)
         if self.save_results:
             self.store_results(status_code, url)
@@ -55,15 +54,12 @@ class Stats:
 
     def iexception(self):
         """Increment Exception number."""
-        self.exception += 1
+        self.req_stats['exception'] += 1
 
 
     def itimeout(self):
-        """
-        Checks for too many timeouts
-        and increases the time.
-        """
-        pass
+        """Increment Timeout number."""
+        self.req_stats['timeout'] += 1
 
 
     def get_start_time(self):
@@ -73,6 +69,7 @@ class Stats:
 
     def get_end_time(self):
         self.end_time = datetime.now()
+        # Return?
 
 
     def store_results(self, status_code, url):
@@ -105,20 +102,24 @@ class Stats:
 
     def check_vitual_dom(self):
         """Check virtual DOM redirects"""
-        total = self.success + self.fail
-        if total > 100:  # ¿Qué número debería ser?
+        total = self.req_stats['success'] + self.req_stats['fail']
+        if total > 100:  # TODO: Mover a settings.
             percentage = VDOM_PERCENTAGE
             max_success = round((total * percentage) / 100)
-            if self.success >= max_success:
-                self.log.lwarn("Too many 200 responses: this may be because of a vitual DOM.")
-                if not self.no_stop:
-                    if not query_yes_no("Continue?"):
-                        # TODO: Esto podría ser cambiado por una
-                        # excepción.
-                        sysexit(0)
-
+            if self.req_stats['success'] >= max_success:
                 self.check_vdom = False
+                self.log.lwarn("Too many 200 responses: this may be because of a vitual DOM.")
 
 
     def check_timeouts(self):
         pass
+
+
+    def reset_stats(self):
+        """Reset all statistics"""
+        for key in self.req_stats:
+            self.req_stats[key] = 0
+        self.start_time = None
+        self.end_time = None
+        self.save_list = []
+        self.check_vdom = True

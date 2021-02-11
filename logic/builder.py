@@ -2,9 +2,9 @@
 Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 from re import sub, search
+from utils import query_yes_no
 from .settings import REGEX_WORD
 from .exceptions import BuildError
-from utils import query_yes_no
 
 
 class UrlBuilder:
@@ -41,7 +41,7 @@ class UrlBuilder:
                 url = self.target_url
         else:
             url = sub(REGEX_WORD, "", self.target_url)
-        
+
         return url
 
 
@@ -50,7 +50,7 @@ class UrlBuilder:
         with open(self.directory, 'r') as dictionary:
             words = []
             for index, word in enumerate(dictionary):
-                if index >= self.start and index <= self.end:
+                if self.start <= index <= self.end:
                     words.append(word.strip())
                 if index == self.end:
                     break

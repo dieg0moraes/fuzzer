@@ -3,7 +3,8 @@ Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 import asyncio
 from math import ceil
-from typing import Dict
+from sys import platform
+from typing import Dict, Union
 from .client import Client
 from .log import LogWrapper
 from .stats import Stats
@@ -70,8 +71,8 @@ class Fuzzer:
         # Connection attributes.
         self.tor = False
         self.proxy = None
-        # TODO: objeto.
         self.urls = []
+        self.ssl_check = None
 
 
     async def _fuzz(self, start, end):
@@ -80,7 +81,7 @@ class Fuzzer:
 
 
     async def _get_results(self, start, end):
-        client = Client(self.logger, self.stats)
+        client = Client(self.logger, self.stats, self.ssl_check)
         data = await client.get_data(self.urls[start:end], self.workers, self.timeout, self.tor, self.proxy)
         return data
 
@@ -98,7 +99,7 @@ class Fuzzer:
                 self.logger.lwarn(f"No timeout provided, using default: {TOR_TIMEOUT}")
 
         if self.timeout < 1:
-            raise ConfigError("Timeout must be grater than 0.")
+            raise ConfigError("Timeout must be greater than 0.")
         if self.workers < 1:
             raise ConfigError("Use at least 1 worker.")
         if self._range[1] - self._range[0] < self._interval:
@@ -107,7 +108,7 @@ class Fuzzer:
         return True
 
 
-    def run(self, interval_count: int = 0, no_stop: bool = False):
+    def run(self, interval_count: int = 0, ssl_check: Union[None, bool] = None):
         """
         Start execution
 
@@ -119,18 +120,31 @@ class Fuzzer:
             the number of requests per interval.
             Defaults to the total number of requests, creating
             only 1 execution interval.
-        no_stop: bool
-            Disable query_yes_no and use
-            defaults to continue running.
+        ssl_check: None, bool
+            Set True or False to force Client to check
+            ssl. Leave None for default option.
         """
+        self.stats.reset_stats()
+
+        if ssl_check is None:
+            # Solution to issue #5
+            if platform == "darwin":
+                # False: No ssl check.
+                self.ssl_check = False
+            else:
+                # None: Default ssl check.
+                self.ssl_check = None
+        elif ssl_check:
+            self.ssl_check = None
+        elif not ssl_check:
+            self.ssl_check = False
+
         if interval_count == 0:
             self._interval = self._range[1] - self._range[0]
         else:
             self._interval = interval_count
 
         self._checkrun()
-
-        self.stats.no_stop = no_stop
 
         loop_start = 0
         loop_end = self._interval
@@ -142,16 +156,23 @@ class Fuzzer:
 
         self.stats.get_start_time()
 
-        while self.urls:
-            loop_count += 1
-            self.logger.linfo(f"@-------------{loop_count}/{total_loop_count}-------------@")
-            future = asyncio.ensure_future(self._fuzz(loop_start, loop_end+1))
-            loop.run_until_complete(future)
+        try:
+            while self.urls:
+                loop_count += 1
+                self.logger.linfo(f"@-------------{loop_count}/{total_loop_count}-------------@")
+                future = asyncio.ensure_future(self._fuzz(loop_start, loop_end+1))
+                loop.run_until_complete(future)
 
-            del self.urls[loop_start:loop_end+1]
-
-        self.stats.get_end_time()
-        self.stats.export_results()
+                del self.urls[loop_start:loop_end+1]
+        except KeyboardInterrupt:
+            self.logger.lerr("I've been interrupted :(")
+        finally:
+            self.logger.linfo(f"@-----------------------------@")
+            # Always wipe tasks and urls.
+            future.cancel()
+            del self.urls[:]
+            self.stats.get_end_time()
+            self.stats.export_results()
 
 
     def build_urls(self, ask: bool = False, inject: bool = True):
@@ -227,3 +248,12 @@ class Fuzzer:
         self._range[1] = end
         self._url = url
         self._dictionary = dictionary
+
+
+    def print_stats(self):
+        """Print result statistics"""
+        self.logger.linfo("Results:")
+        for key, value in self.stats.req_stats.items():
+            self.logger.linfo(f"{key}: {value}")
+        self.logger.linfo(f"Start at {self.stats.start_time}")
+        self.logger.linfo(f"End at {self.stats.end_time}")

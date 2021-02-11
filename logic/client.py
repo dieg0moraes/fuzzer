@@ -2,42 +2,30 @@
 Copyright (c) 2020 Diego Moraes. MIT license, see LICENSE file.
 """
 import asyncio
-from sys import platform
-from timeit import default_timer
 from aiohttp import ClientSession
 from aiohttp_socks import SocksConnector, ProxyConnector, ProxyConnectionError, SocksConnectionError
 
 
-# START_TIME = default_timer()
-
-# Solution to issue #5
-if platform == "darwin":
-    # False: No ssl check.
-    ssl_enabled = False
-else:
-    # None: Default ssl check.
-    ssl_enabled = None
-
-
 class Client:
 
-    def __init__(self, logger, stats):
+    def __init__(self, logger, stats, ssl_check):
         self.log = logger
         self.stats = stats
+        self.ssl = ssl_check
 
     async def fetch(self, session, url, timeout):
         try:
-            async with session.get(url, timeout=timeout, allow_redirects=True, ssl=ssl_enabled) as response:
+            async with session.get(url, timeout=timeout, allow_redirects=True, ssl=self.ssl) as response:
 
                 if str(response.status)[0] == "2":
-                    # elapsed = default_timer() - START_TIME
-                    # time_completed_at = f"{elapsed:5.2f}s"
-                    # log_message = f"{url:<30} {time_completed_at:>20}"
                     self.stats.isuccess(url, str(response.status))
                 else:
                     self.stats.ifail(url, str(response.status))
                 await response.text()
-        # Estas except podrían irse para fuzzer.run().
+
+        except asyncio.exceptions.TimeoutError:
+            self.log.linfo(f'TIMEOUT::{url}')
+            self.stats.itimeout()
         except UnicodeError:
             self.log.lerr('Unicode error')
             self.stats.iexception()
